@@ -1,0 +1,92 @@
+<!--
+  Generated template for the OrderServant page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="mov">
+    <ion-title>{{'order servant' | translate}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list class="lis">
+    <ion-item>
+      <ion-label id="lbl-28">{{'Job' | translate}}</ion-label>
+      <ion-select  interface="action-sheet" name="jawb" [(ngModel)]="occupationid" cancelText='{{"Cancel" | translate}}'
+                  okText='{{"ok" | translate}}'>
+        <ion-option *ngFor="let occupation of occupations" value="{{occupation.occupationid}}">
+          {{occupation.occupationname | translate}}
+        </ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label id="lbl-29">{{'Nationality' | translate}}</ion-label>
+      <ion-select interface="action-sheet"  name="nationz" [(ngModel)]="nationalityid" cancelText='{{"Cancel" | translate}}'
+                  okText='{{"ok" | translate}}'>
+        <ion-option *ngFor="let nationality of nationalities" value="{{nationality.nationalityid}}">
+          {{nationality.nationalityname |
+          translate}}
+        </ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label id="lbl-30">{{'Gender'|translate}}</ion-label>
+      <ion-select  interface="action-sheet" name="gender" [(ngModel)]="genderid" cancelText='{{"Cancel" | translate}}' okText='{{"ok" | translate}}'>
+        <ion-option *ngFor="let gend of gender" value="{{gend.genderid}}">{{gend.gendername | translate}}
+        </ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label id="lbl-31">{{'Marital Status'|translate}}</ion-label>
+      <ion-select interface="action-sheet"  name="marit" [(ngModel)]="maritalid" cancelText='{{"Cancel" | translate}}'
+                  okText='{{"ok" | translate}}'>
+        <ion-option *ngFor="let marital of maritals" value="{{marital.marital_statusid}}">{{marital.marital_statusname |
+          translate}}
+        </ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label id="lbl-32">{{'Age' | translate}}</ion-label>
+      <ion-select  interface="action-sheet" [(ngModel)]="ageid" cancelText='{{"Cancel" | translate}}' okText='{{"ok" | translate}}'>
+        <ion-option *ngFor="let age of ages" value="{{age.agesid}}">{{age.agesname}}
+        </ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label id="lbl-33">{{'Religion' | translate}}</ion-label>
+      <ion-select  interface="action-sheet" name="religi" [(ngModel)]="religionid" cancelText='{{"Cancel" | translate}}'
+                  okText='{{"ok" | translate}}'>
+        <ion-option *ngFor="let religion of religions" value="{{religion.religionid}}">{{religion.religionname |
+          translate}}
+        </ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label id="lbl-34">{{'Type' | translate}}</ion-label>
+      <ion-select interface="action-sheet"  name="typeid" [(ngModel)]="typeid" cancelText='{{"Cancel" | translate}}'
+                  okText='{{"ok" | translate}}'>
+        <ion-option *ngFor="let typ of type" value="{{typ.typeid}}">{{typ.typename | translate}}
+        </ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label id="lbl-35">{{'specialty' | translate}}</ion-label>
+      <ion-select interface="action-sheet"  name="specialtyid" [(ngModel)]="specialtyid" cancelText='{{"Cancel" | translate}}'
+                  okText='{{"ok" | translate}}'>
+        <ion-option *ngFor="let special of specialty" value="{{special.specialtyid}}">{{special.specialtyname | translate}}
+        </ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <button ion-button full color="mov" (click)="order()">
+    {{'order'|translate}}
+  </button>
+  <br>
+  <br>
+  <p class="text">{{text}}</p>
+</ion-content>

@@ -1,0 +1,44 @@
+login-page {
+  .cc{
+    text-align: center;
+  }
+  .item{
+    background-color: transparent;
+  }
+  span.button-inner {
+    font-size: initial;
+  }
+  .input{
+    border: 1px #634e5d solid;
+    border-radius: 5px;
+  }
+  .inp{
+    margin-bottom: 10px;
+    &.lst{
+      margin-bottom: 0;
+    }
+  }
+  .lin{
+    padding: 0;
+    margin: 0;
+  }
+  .label{
+    margin:0;
+  }
+  .lin a{
+    color:#2d1d2a!important;
+    margin: 0;
+    font-size: 14px;
+    font-family: "Cairo";
+  }
+  .btn-in{
+    background-color: #9b398c;
+    font-family: "Cairo";
+    padding: 1.5em!important;
+    margin-bottom: 10px;
+  }
+  .btn-up{
+    font-family: "Cairo";
+    padding: 1.5em!important;
+  }
+}

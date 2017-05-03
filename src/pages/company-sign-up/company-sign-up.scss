@@ -1,0 +1,34 @@
+page-company-sign-up {
+  .alert-head {
+    background-color: cadetblue;
+  }
+  ion-label#lbl-13  {
+    color: gray;
+    font-weight: 400;
+  }
+  ion-label#lbl-14  {
+    color: gray;
+    font-weight: 400;
+  }
+  ion-label#lbl-20 {
+    color: #999;
+    font-weight: 300;
+  }
+  ion-label#lbl-21 {
+    color: #999;
+    font-weight: 300;
+  }
+  button.submit-btn.disable-hover.button.button-md.button-default.button-default-md.button-full.button-full-md.button-md-mov {
+    text-transform: none;
+  }
+  ion-label#lbl-28 {
+    color: gray;
+  }
+  ion-label#lbl-29 {
+    color: gray;
+  }
+  ion-item.item.item-block.item-md.item-select {
+    margin-left: -8px;
+    margin-right: -8px;
+  }
+}

@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar *navbar>
+    <ion-buttons start>
+      <button (click)="dismiss()">
+        Cancel
+      </button>
+    </ion-buttons>
+    <ion-title>Sample Modal</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding class="sample-modal-page">
+  <ion-avatar (click)="dismiss()">
+    <ion-icon name="close"></ion-icon>
+  </ion-avatar>
+
+  <br>
+  <br>
+  <ion-thumbnail *ngFor="let serv of worker">
+    <img src="{{serv.image3}}">
+  </ion-thumbnail>
+  <br>
+  <br>
+<!--  <ion-thumbnail *ngFor="let comp of company">
+    <img src="{{comp.image}}">
+  </ion-thumbnail>-->
+</ion-content>

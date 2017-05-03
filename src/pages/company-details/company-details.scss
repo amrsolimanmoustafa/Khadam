@@ -1,0 +1,391 @@
+page-company-details {
+  .segment-md-mov .segment-button.segment-activated {
+    border-color: #9d3a8d !important;
+    color: white !important;
+    opacity: 1;
+    background-color: #9d3a8d !important;
+    font-weight: bold !important;
+    font-size: initial !important;
+  }
+
+}
+//  ion-row.religon2.row {
+//    margin-left: 7px;
+//    margin-top: -24px;
+//  }
+//  #map {
+//    width: 100%;
+//    display:block;
+//    min-height: 400px;
+//    position:relative;
+//    height: 70vh !important;
+//  }
+//  ion-row.workersnumber {
+//    margin-top: -15%;
+//    width: 180px;
+//    white-space: nowrap;
+//    overflow: hidden !important;
+//    text-overflow: ellipsis;
+//    margin-left: 14%;
+//  }
+//
+//  .segment-md-mov .segment-button.activated, .segment-md-mov .segment-button.segment-activated {
+//    border-color: white;
+//    color: white;
+//    opacity: 1;
+//    background-color: #9d3a8d;
+//    font-weight: bold;
+//  }
+//
+//  .card-md {
+//    width: 110%;
+//    border-radius: 2px;
+//    font-size: 1.4rem;
+//    background: #fff;
+//    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+//    margin: -14px;
+//    /* padding: 0px; */
+//  }
+//  ion-card.imagecard.card.card-ios {
+//    width: 110%;
+//    border-radius: 2px;
+//    font-size: 1.4rem;
+//    background: #fff;
+//    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+//    margin: -14px;
+//  }
+//  .card-md .text-md-dark {
+//    color: #222;
+//    width:180px;
+//    white-space: nowrap;
+//    overflow:hidden !important;
+//    text-overflow: ellipsis;
+//  }
+//
+//
+//  .card-md .text-md-mov {
+//    color: #9c398d;
+//    padding-left: 4px;
+//  }
+//  ion-row.stars {
+//    margin-left: 15%;
+//  }
+//  ion-col.butt {
+//    display: -webkit-inline-box;
+//    background-color: #9c398d;
+//  }
+//  .button-md-mov {
+//    color: #fff;
+//    background-color: #9c398d;
+//    width: 53%;
+//    height: 72%;
+//    text-transform: none;
+//    margin-left: -2%;
+//  }
+//
+//  ion-col.mybut {
+//    margin-top: 22px;
+//  }
+//    p.compdetails {
+//      white-space: pre-line;
+//      margin-left: 3%;
+//      overflow: hidden !important;
+//      text-overflow: ellipsis;
+//      text-align: justify;
+//      padding: 8px;
+//      width: 95%;
+//      direction: rtl;
+//  }
+//  //worker card
+//
+//  ion-card.myCard.card.card-md {
+//    margin-right: 1%;
+//    margin-left: 1%;
+//    width: 98%;
+//    border-radius: 12px;
+//    font-size: 1.4rem;
+//    background: #fff;
+//    height: 22%;
+//    border: 1px solid #b5a4a4;
+//    margin-top: 4px;
+//  }
+//  ion-thumbnail {
+//    border: 1px solid #b5a4a4;
+//    border-radius: 4px;
+//    width: 157%;
+//    margin-left: -11px;
+//    height: 100%;
+//  }
+//  .controlcards {
+//    margin-top: 6%;
+//  }
+//  ion-list.liss.list.list-md {
+//    margin-left: 15%;
+//    margin-top: -14%;
+//  }
+//  ion-row.roww {
+//    display: -webkit-inline-box;
+//    width: 163%;
+//    margin-left: 11%;
+//    margin-top: -21%;
+//  }
+//
+//  .button[icon-only] {
+//    min-width: .9em;
+//    margin-left: 65%;
+//    margin-top: -5%;
+//  }
+//
+//  button.disable-hover.button.button-md.button-default.button-default-md.button-md-mov {
+//    width: 60%;
+//    height: 91%;
+//    text-transform: none;
+//    margin-top: 5px;
+//  }
+//
+//  img {
+//    height: 110px;
+//    max-width: 100%;
+//  }
+//  h6.nameheader.text.text-md.text-md-dark {
+//    margin-top: 2%;
+//    width: 220px;
+//    white-space: nowrap;
+//    overflow: hidden !important;
+//    text-overflow: ellipsis;
+//    margin-left: -11px;
+//    margin-bottom: 13px;
+//  }
+//
+//  h6.nameheader.text.text-ios.text-ios-dark {
+//    width: 300px !important;
+//    white-space: nowrap;
+//    margin-left: -4% !important;
+//    overflow: hidden !important;
+//    text-overflow: ellipsis;
+//    margin-top: 2px;
+//    margin-right: 6%;
+//  }
+//  h6.nameheader2.text.text-md.text-md-dark{
+//    width: 300px;
+//    white-space: nowrap;
+//    overflow: hidden !important;
+//    text-overflow: ellipsis;
+//    color: #a53c94;
+//    font-size: 16px;
+//    font-weight: 600;
+//  }
+//
+//  //ios design
+//  ion-card.myCard.card.card-ios {
+//    margin-right: 1%;
+//    margin-left: 1%;
+//    width: 98%;
+//    border-radius: 12px;
+//    font-size: 1.4rem;
+//    background: #fff;
+//    height: 22%;
+//    border: 1px solid #b5a4a4;
+//    margin-top: 4px;
+//  }
+//  button.disable-hover.button.button-ios.button-default.button-default-ios.button-ios-mov {
+//    width: 60px;
+//    height: 24px;
+//    text-transform: none;
+//    bottom: -10px;
+//  }
+//  h6.nameheader2.text.text-ios.text-ios-dark {
+//    width: 300px;
+//    white-space: nowrap;
+//    overflow: hidden !important;
+//    text-overflow: ellipsis;
+//    color: #a53c94;
+//    font-size: 16px;
+//    font-weight: 600;
+//  }
+//  ion-row.religon {
+//    margin-top: -14%;
+//    margin-left: 8%;
+//  }
+//  ion-row.nationalty {
+//    margin-top: -12%;
+//    margin-left: 8%;
+//  }
+//
+//  ion-row.salary {
+//    margin-top: -9%;
+//    margin-left: -3%;
+//    width: 300px;
+//  }
+//  ion-row.more {
+//    margin-top: -13%;
+//    margin-left: 8%;
+//  }
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//  @media screen and (max-width: 320px) {
+//    img {
+//      height: 109px;
+//      max-width: 100%;
+//    }
+//     ion-thumbnail {
+//    border: 1px solid #b5a4a4;
+//    border-radius: 4px;
+//    width: 157%;
+//    margin-left: -11px;
+//    height: 94%;
+//}
+// button.disable-hover.button.button-ios.button-default.button-default-ios.button-ios-mov {
+//    width: 67%;
+//    height: 91%;
+//    text-transform: none;
+//    margin-top: 7px;
+//}
+//    ion-row.more {
+//      margin-top: -21%;
+//    }
+//    ion-row.religon {
+//      margin-top: -13%;
+//      width: 101px;
+//    }
+//    .button[icon-only] {
+//      min-width: .9em;
+//      margin-left: 65%;
+//      margin-top: -12%;
+//    }
+//  }
+//  h6.work.text.text-md.text-md-mov {
+//    margin-top: 6%;
+//    text-transform: none;
+//  }
+//
+//.card-ios .text-ios-dark {
+//    color: #222;
+//    width: 90px;
+//}
+//  h6.work.text.text-md.text-md-light {
+//    margin-top: 6%;
+//    text-transform: none;
+//  }
+//  h6.work.text.text-ios.text-ios-light {
+//    margin-top: 4%;
+//    text-transform: none;
+//  }
+//  ion-col.col {
+//    margin-left: 6%;
+//  }
+//  ion-slides.myslider.slides.slides-md.slides-1 {
+//    border: 1px solid black;
+//  }
+// h6.nameheader.text.text-ios.text-ios-dark {
+//    width: 202px;
+//    white-space: nowrap;
+//    margin-left: 6%;
+//    overflow: hidden !important;
+//    text-overflow: ellipsis;
+//    margin-top: 2px;
+//    margin-right: 6%;
+//}
+//
+//  @media screen and (min-width: 600px) {
+//    ion-card.myCard.card.card-md {
+//      margin: 7px 10px 10px 4px;
+//      width: 98%;
+//      border-radius: 12px;
+//      font-size: 1.4rem;
+//      background: #fff;
+//      height: 22%;
+//      border: 1px solid #b5a4a4;
+//      margin-top: 4px;
+//    }
+//    ion-row.newmore {
+//      margin-left: -3%;
+//      margin-top: 32%;
+//      bottom: 0;
+//    }
+//    ion-row.religon {
+//       margin-top: 0px;
+//      margin-left: 8%;
+//    }
+//    ion-row.nationalty {
+//        margin-top: 0px;
+//        margin-left: 8%;
+//    }
+//   /* page-company-details ion-row.roww{
+//      display: -webkit-inline-box;
+//      width: 163%;
+//      margin-left: 8%;
+//      margin-top: -15%;
+//    }*/
+//    img {
+//      height: 134px;
+//      max-width: 100%;
+//      width: 230px;
+//    }
+//    ion-row.salary {
+//      margin-top: -7%;
+//      margin-left: 8%;
+//    }
+//    .button-md-mov {
+//      color: #fff;
+//      background-color: #9c398d;
+//      width: 53%;
+//      height: 72%;
+//      text-transform: none;
+//      margin-left: -2%;
+//      margin-top: 6%;
+//    }
+//    p.compdetails {
+//      color: #222;
+//      width: 403px;
+//      white-space: initial;
+//      margin-left: 25%;
+//      margin-right: 25%;
+//      overflow: hidden !important;
+//      text-overflow: ellipsis;
+//      text-align: center;
+//      font-size: x-large;
+//    }
+//    ion-thumbnail {
+//      border: 1px solid #b5a4a4;
+//      border-radius: 4px;
+//      width: 157%;
+//      margin-left: -5px;
+//      height: 100%;
+//    }
+//    ion-row.more {
+//      margin-top: -4%;
+//      margin-left: 10%;
+//    }
+//    .button[icon-only] {
+//      min-width: .9em;
+//      margin-left: 65%;
+//      margin-top: 0px;
+//    }
+//    h6.nameheader.text.text-md.text-md-dark {
+//      font-weight: 700;
+//      width: 403px;
+//      white-space: initial;
+//      margin-left: 2%;
+//      overflow: hidden !important;
+//      text-overflow: ellipsis;
+//      margin-top: 6%;
+//    }
+//  }
+//}

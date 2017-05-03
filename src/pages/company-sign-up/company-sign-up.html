@@ -1,0 +1,64 @@
+<!--
+  Generated template for the CompanySignUp page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="mov">
+    <ion-title>{{'Sign-Up'|translate}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <form (ngSubmit)="signUpCompany()" #registerForm="ngForm">
+    <ion-list inset>
+
+      <ion-item>
+        <ion-input type="text" placeholder="{{'Username'| translate }}" name="username" [(ngModel)]="username"
+                   required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="email" placeholder="{{'E-Mail'| translate }}" name="email" [(ngModel)]="email"
+                   required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="number" placeholder="{{'Mobile'| translate }}" name="mobile" [(ngModel)]="mobile"
+                   required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="password" placeholder="{{'Password'| translate }}" name="password" [(ngModel)]="password"
+                   required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="companyname" placeholder="{{'Company Name'| translate }}" name="companyname"
+                   [(ngModel)]="companyname"
+                   required></ion-input>
+      </ion-item>
+
+
+      <ion-item>
+        <ion-label id="lbl-28" class="cawntry">{{'Speciality' | translate}}</ion-label>
+        <ion-select name="speciality" [(ngModel)]="specialityid">
+          <ion-option *ngFor="let speciality of specialities" value="{{speciality.specialtyid}}">
+            {{speciality.specialtyname | translate}}
+          </ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label id="lbl-29">{{'Country' | translate}}</ion-label>
+        <ion-select name="cawntry" [(ngModel)]="countryid">
+          <ion-option *ngFor="let country of countries" value="{{country.countryid}}">{{country.countryname |
+            translate}}
+          </ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+    <button ion-button class="submit-btn" full color="mov" type="submit" [disabled]="!registerForm.form.valid">
+      {{'Sign-Up' | translate}}
+    </button>
+  </form>
+</ion-content>

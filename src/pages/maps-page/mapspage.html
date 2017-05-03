@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Map
+    </ion-title>
+    <!--<ion-buttons end>-->
+      <!--<button >  &lt;!&ndash;(click)="centerLocation()"&ndash;&gt;-->
+        <!--<ion-icon name="navigate"></ion-icon>-->
+      <!--</button>-->
+    <!--</ion-buttons>-->
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="map-page">
+
+</ion-content>
+
+<ion-content>
+  <div #map id="map"></div>
+  <!--<div id="locator"></div>-->
+
+  <!--<pickup [map]="map" [isPinSet]="isMapIdle"></pickup>-->
+  <!--<ion-card class="top">-->
+
+    <!--<ion-card-header >-->
+      <!--manga-->
+    <!--</ion-card-header>-->
+
+    <!--<ion-card-content>-->
+      <!--<button ion-button>Request Pickup</button>-->
+    <!--</ion-card-content>-->
+
+  <!--</ion-card>-->
+  <!--request-controls-->
+  <div class="bottom">
+
+        <button ion-button (click)="saveAddress()">{{'Save Address'|translate}}</button>
+
+    <!--<ion-row>-->
+      <!--<ion-col>-->
+        <!--PICKUP TIME IS APPROXIMATELY 5 MIN-->
+      <!--</ion-col>-->
+    <!--</ion-row>-->
+  </div>
+</ion-content>

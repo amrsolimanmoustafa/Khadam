@@ -1,0 +1,34 @@
+
+<ion-header>
+  <ion-navbar color="mov">
+
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{'Choose Language' | translate}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="background">
+
+  <ion-avatar class="logo">
+    <img src="assets/imgs/icon.png">
+  </ion-avatar>
+
+
+  <ion-grid dir="ltr">
+    <ion-row>
+      <ion-col>
+          <ion-avatar class="img" item-center>
+            <img src="assets/imgs/english.png" (click)="setLanguage('en')">
+          </ion-avatar>
+      </ion-col>
+      <ion-col>
+          <ion-avatar class="img"  item-center>
+            <img src="assets/imgs/arabic.png" (click)="setLanguage('ar')">
+          </ion-avatar>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

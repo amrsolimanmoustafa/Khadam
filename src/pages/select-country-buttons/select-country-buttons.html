@@ -1,0 +1,35 @@
+<ion-header>
+
+  <ion-navbar color="mov">
+    <ion-title>{{'Select Country' | translate}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<!--<ion-content padding>
+  <ion-avatar class="logo">
+    <img src="assets/imgs/icon.png">
+  </ion-avatar>
+
+  <h6 *ngIf="mygeocountry">{{'You are now in: '|translate}} {{mygeocountry}}</h6>
+
+  <ion-list >
+    <ion-list-header>
+      {{'Select Country' |translate}}
+    </ion-list-header>
+    <ion-item  color="mov" outline text-center *ngFor="let country of countries" (click)="setCountry(country.countryid)">{{country.countryname}}</ion-item>
+  </ion-list>
+
+</ion-content>-->
+<ion-content padding class="bg">
+  <ion-list no-lines>
+    <ion-item class="cc">
+      <img src="assets/imgs/icon.png" height="125">
+    </ion-item>
+    <br>
+    <ion-item class="btn" dir="rtl"  *ngFor="let country of countries" (click)="setCountry(country.countryid)">
+      <img src="{{country.picpath}}" height="32">&ensp;{{country.countryname}}
+    </ion-item>
+  </ion-list>
+</ion-content>

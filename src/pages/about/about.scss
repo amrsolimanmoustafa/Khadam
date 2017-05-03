@@ -1,0 +1,71 @@
+page-about {
+  .aboutus {
+    width: 100%;
+    height: 100vh;
+    padding-top: 15%;
+    top: -112px;
+    .title {
+      text-align: center;
+      height: 61px;
+      width: 250px;
+      line-height: 61px;
+      vertical-align: middle;
+      background-color: transparent;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 250px 61px;
+      letter-spacing: 2.5px;
+      margin: 0 auto;
+      margin-bottom: 15px;
+      font-size: 24px;
+    }
+    .logo {
+      width: 100%;
+      text-align: center;
+      img {
+        width: 150px;
+      }
+    }
+    .titleh {
+      text-align: left;
+      color: green;
+      font-weight: 700;
+      font-size: 16px;
+      padding: 5px 16px;
+    }
+    .textp {
+      padding: 0 16px;
+      font-size: 16px;
+      text-align: justify;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+
+    }
+    .version {
+      text-align: center;
+    }
+    .copy {
+      text-align: center;
+      color: green;
+    }
+  }
+  .card-md p {
+    margin: 0 0 2px;
+    font-size: 1.4rem;
+    font-weight: normal;
+    line-height: 1.5;
+    color: #222;
+    text-align: justify;
+    padding: 5px;
+   }
+
+  ion-card-header {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
+  }
+
+}

@@ -1,0 +1,112 @@
+<ion-header>
+  <ion-navbar color="mov">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{'Edit Worker'|translate}}</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="gotoSearch()">
+        <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content style="background-color: white">
+  <ion-list>
+    <ion-item>
+      <ion-label class="grayed" >{{'Worker Name'| translate}}</ion-label>
+      <ion-input type="text" [(ngModel)]="Name"></ion-input>
+    </ion-item>
+    <ion-item class="workerpic" (click)="GalleryOrCamera(PERSONAL_PHOTO)">
+      <ion-label class="grayed">{{'Personal Photo'|translate}}
+        <input type="file" name="workerpic" id="workerpic" style="display: none;"
+               accept="image/x-png, image/gif, image/jpeg" >
+        <label for="workerpic" ion-button small style="float: right;">{{'Browse' | translate}}</label>
+      </ion-label>
+    </ion-item>
+    <ion-item class="workerpic" (click)="GalleryOrCamera(FULL_PHOTO)">
+      <ion-label class="grayed">{{'Full Photo'|translate}}
+        <input type="file" name="workerpic" id="workerpic" style="display: none;"
+               accept="image/x-png, image/gif, image/jpeg">
+        <label for="workerpic" ion-button small style="float: right;">{{'Browse' | translate}}</label>
+      </ion-label>
+    </ion-item>
+    <ion-item class="workerpic" (click)="GalleryOrCamera(HOST_PHOTO)">
+      <ion-label class="grayed">{{'CV Photo'|translate}}
+        <input type="file" name="workerpic" id="workerpic" style="display: none;"
+               accept="image/x-png, image/gif, image/jpeg">
+        <label for="workerpic" ion-button small style="float: right;">{{'Browse' | translate}}</label>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label class="grayed">{{'Birth Date'|translate}}</ion-label>
+      <ion-datetime [(ngModel)]="birth_date"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label class="grayed">{{'Job'|translate}}</ion-label>
+      <ion-select name="jawb" [(ngModel)]="occupationid" cancelText='{{"Cancel" | translate}}'
+                  okText='{{"Ok" | translate}}'>
+        <ion-option *ngFor="let occupation of occupations" value="{{occupation.occupationid}}">
+          {{occupation.occupationname | translate}}
+        </ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label class="grayed">{{'Nationality'|translate}}</ion-label>
+     <!-- <ion-input type="text" [(ngModel)]="nationalityid"></ion-input> -->
+      <ion-select name="nationz" [(ngModel)]="nationalityid" cancelText='{{"Cancel" | translate}}'
+                  okText='{{"ok" | translate}}'>
+        <ion-option *ngFor="let nationality of nationalities" value="{{nationality.nationalityid}}">
+          {{nationality.nationalityname |
+          translate}}
+        </ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label class="grayed">{{'Religion'|translate}}</ion-label>
+      <ion-select name="religi" [(ngModel)]="religionid" cancelText='{{"Cancel" | translate}}'
+                  okText='{{"ok" | translate}}'>
+        <ion-option *ngFor="let religion of religions" value="{{religion.religionid}}">{{religion.religionname |
+          translate}}
+        </ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label class="grayed">{{'Residence'|translate}}</ion-label>
+      <ion-select name="cawntry" [(ngModel)]="countryid" cancelText='{{"Cancel" | translate}}'
+                  okText='{{"ok" | translate}}'>
+        <ion-option *ngFor="let country of countries" value="{{country.countryid}}">{{country.countryname |
+          translate}}
+        </ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label class="grayed">{{'Marital Status'|translate}}</ion-label>
+      <ion-select name="marit" [(ngModel)]="maritalid" cancelText='{{"Cancel" | translate}}'
+                  okText='{{"ok" | translate}}'>
+        <ion-option *ngFor="let marital of maritals" value="{{marital.marital_statusid}}">{{marital.marital_statusname |
+          translate}}
+        </ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label class="grayed">{{'Gender'|translate}}</ion-label>
+      <ion-select [(ngModel)]="sex" cancelText='{{"Cancel" | translate}}' okText='{{"ok" | translate}}'>
+        <ion-option value="1" checked="true">{{'Male'|translate}}</ion-option>
+        <ion-option value="0">{{'Female'|translate}}</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label class="grayed" >{{'Salary'| translate}}</ion-label>
+      <ion-input type="number" [(ngModel)]="salary"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label class="grayed">{{'I agree terms & conditions.'|translate}}</ion-label>
+      <ion-checkbox color="green" checked="false" [(ngModel)]="agree"></ion-checkbox>
+    </ion-item>
+    <ion-item style="text-align: center;">
+      <button [disabled]="!agree" ion-button default (click)="submitWorker()">{{'Edit Worker'|translate}}</button>
+    </ion-item>
+  </ion-list>
+</ion-content>

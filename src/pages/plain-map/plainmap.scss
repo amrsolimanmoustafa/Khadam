@@ -1,0 +1,47 @@
+plain-map {
+  .wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  ion-content {
+    background: rgb(229, 227, 223);
+  }
+  #map {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 150ms ease-in
+  }
+  #map.show-map {
+    opacity: 1;
+  }
+  #map.show-map {
+    opacity: 1;
+  }
+  .map-wrapper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .bottom {
+    position: absolute;
+    bottom: 0;
+    margin-left: 33%;
+    text-align: center;
+  }
+
+  .top {
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  .request-controls {
+    text-align: center;
+    background: linear-gradient(transparent, map-get($colors, light));
+  }
+
+
+
+}

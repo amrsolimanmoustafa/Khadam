@@ -1,0 +1,37 @@
+page-select-country-buttons {
+  .cc{
+    text-align: center;
+  }
+  .item{
+    background-color: transparent;
+  }
+  ion-label.label.label-md {
+    color: black !important;
+  }
+  .bg{
+    background: #f1daea;
+    background: -moz-linear-gradient(top, #f1daea 0%, #f1daea 30%, #f1daea 69%, #f2daea 100%);
+    background: -webkit-linear-gradient(top, #f1daea 0%,#f1daea 30%,#f1daea 69%,#f2daea 100%);
+    background: linear-gradient(to bottom, #f1daea 0%,#f1daea 30%,#f1daea 69%,#f2daea 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1daea', endColorstr='#f2daea',GradientType=0 );
+  }
+  .btn{
+    width: 95%;
+    margin-left: 10px;
+    font-family: "Cairo";
+    background-color: #fff;
+    padding: 0;
+    border: 1px #7c3b75 solid!important;
+    border-radius: 10px;
+    margin-bottom: 1px;
+  }
+  .label{
+    margin: 0;
+  }
+  .btn img{
+    float: right!important;
+  }
+  ion-label.label.label-ios {
+    color: black !important;
+  }
+}

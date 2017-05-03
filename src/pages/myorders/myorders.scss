@@ -1,0 +1,52 @@
+page-myorders {
+  .narrow{
+    height: 21px;
+    width: 30px;
+    float: right;
+    margin-top: -12px;
+  }
+  .worker-img{
+    width:75px;
+    height:75px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 10px;
+    margin-top: 15px;
+    border: 1px #e7e7e7 solid;
+    background-color: #eee;
+  }
+  .worker-details{
+    float: left;
+      tr{
+        text-indent: 5px;
+      	td{
+      		width:50%;
+        	  &.green{
+              color:green;
+              font-weight: 700;
+            }
+            &.red{
+              color:red;
+              font-weight: 700;
+            }
+            &.yellow{
+              color:orange;
+              font-style: italic;
+              &::after{
+                content: "...";
+                font-style: italic;
+                color: #666;
+              }
+            }
+          }
+
+        &.status{
+          background-color: #f9f9f9;
+        }
+      }
+    &::after{
+      content: "*";
+      color:transparent;
+    }
+  }
+}

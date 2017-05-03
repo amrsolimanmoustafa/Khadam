@@ -1,0 +1,234 @@
+<!--
+<ion-header>
+  <ion-navbar color="mov">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{'Alkhadam'| translate}}</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="gotoSearch()">
+        <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-buttons end>
+    <button class="countryflag" ion-button icon-only>
+          <img [src]="countryflag">
+    </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-segment [(ngModel)]="RC" color="mov">
+      <ion-segment-button value="Recruitment">
+      {{'Manpower Workers'|translate}}
+      </ion-segment-button>
+      <ion-segment-button value="Clean">
+      {{'Cleaning Workers'|translate}}
+      </ion-segment-button>
+    </ion-segment>
+  </ion-row>
+  <ion-row [ngSwitch]="RC" >
+    <ion-row  *ngSwitchCase="'Recruitment'">
+      <ion-row>
+         <div *ngFor="let ban of bannar2">
+           <ion-card class="imagecard" >
+             <img src="{{ban.picpath}}">
+           </ion-card>
+         </div>
+      </ion-row>
+      <ion-row>
+        <div class="cardshow" *ngFor="let worker of workersClean">
+          <div class="cimg" (click)="gotoDetails(worker.workerid)">
+            <img src="{{worker.picpath}}"/>
+          </div>
+          <div class="ctext">
+            <h6 class="ctitle">{{worker.name}}</h6>
+            <p class="cdet">{{worker.religion}}
+            {{worker.nationality}}
+            {{worker.occupation}}
+            {{worker.salary}} &ensp;{{worker.currency}}</p>
+            <a class="mo-re" (click)="gotoDetails(worker.workerid)">
+              {{'more' | translate}}
+            </a>
+          </div>
+          <ion-col col-2 style="max-height: 130px;padding-bottom: 0px;margin-top: -9px;">
+                  <button ion-button clear icon-only (click)="addToCart(worker.workerid)">
+                    <ion-icon color="mov" ios="ios-star" md="md-star"></ion-icon>
+                  </button>
+                  <button ion-button clear icon-only (click)="sendSMS(worker.companymobile)">
+                    <ion-icon color="mov" ios="ios-text" md="md-text" style="padding-top: 5px"></ion-icon>
+                  </button>
+                  <button ion-button clear icon-only>
+                    <a ion-text href="tel:{{worker.companymobile}}">
+                      <ion-icon color="mov" ios="ios-call" md="ios-call" style="padding-top: 9px"></ion-icon>
+                    </a>
+                  </button>
+         </ion-col>
+        </div>
+      </ion-row>
+    </ion-row>
+    <ion-row *ngSwitchCase="'Clean'">
+      <ion-row>
+         <div *ngFor="let ban of bannar">
+           <ion-card class="imagecard" >
+             <img src="{{ban.picpath}}">
+           </ion-card>
+         </div>
+      </ion-row>
+      <ion-row>
+        <div class="cardshow" *ngFor="let worker of workersEstkdam">
+          <div class="cimg" (click)="gotoDetails(worker.workerid)">
+            <img src="{{worker.picpath}}"/>
+          </div>
+          <div class="ctext">
+            <h6 class="ctitle">{{worker.name}}</h6>
+            <p class="cdet">{{worker.religion}}
+            {{worker.nationality}}
+            {{worker.occupation}}
+            {{worker.salary}} &ensp;{{worker.currency}}</p>
+            <a class="mo-re" (click)="gotoDetails(worker.workerid)">
+              {{'more' | translate}}
+            </a>
+          </div>
+          <ion-col col-2 style="max-height: 130px;padding-bottom: 0px;margin-top: -9px;">
+                  <button ion-button clear icon-only (click)="addToCart(worker.workerid)">
+                    <ion-icon color="mov" ios="ios-star" md="md-star"></ion-icon>
+                  </button>
+                  <button ion-button clear icon-only (click)="sendSMS(worker.companymobile)">
+                    <ion-icon color="mov" ios="ios-text" md="md-text" style="padding-top: 5px"></ion-icon>
+                  </button>
+                  <button ion-button clear icon-only>
+                    <a ion-text href="tel:{{worker.companymobile}}">
+                      <ion-icon color="mov" ios="ios-call" md="ios-call" style="padding-top: 9px"></ion-icon>
+                    </a>
+                  </button>
+         </ion-col>
+        </div>
+      </ion-row>
+    </ion-row>
+  </ion-row>
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>
+-->
+<ion-header>
+  <ion-navbar color="mov">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{'Alkhadam'| translate}}</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="gotoSearch()">
+        <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-buttons end>
+    <button class="countryflag" ion-button icon-only>
+          <img [src]="countryflag">
+    </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-segment [(ngModel)]="RC" color="mov">
+      <ion-segment-button value="Recruitment">
+      <h6 class="h-tab">{{'Manpower Workers'|translate}}</h6>
+      </ion-segment-button>
+      <ion-segment-button value="Clean">
+     <h6 class="h-tab"> {{'Cleaning Workers'|translate}}</h6>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-row>
+  <ion-row [ngSwitch]="RC" >
+    <ion-row  *ngSwitchCase="'Recruitment'">
+      <ion-row>
+         <div *ngFor="let ban of bannar2">
+           <ion-card class="imagecard" >
+             <img src="{{ban.picpath}}">
+           </ion-card>
+         </div>
+      </ion-row>
+      <ion-row>
+        <div class="cardshow" *ngFor="let worker of workersClean">
+          <div class="cimg" (click)="gotoDetails(worker.workerid)">
+            <img src="{{worker.picpath}}"/>
+          </div>
+          <div class="ctext">
+            <h6 class="ctitle">{{worker.name}}</h6>
+            <p class="cdet">{{worker.religion}}
+            {{worker.nationality}}
+            {{worker.occupation}}
+            {{worker.salary}} &ensp;{{worker.currency}}</p>
+            <a class="mo-re" (click)="gotoDetails(worker.workerid)">
+              {{'more' | translate}}
+            </a>
+          </div>
+           <ion-col col-2 style="max-height: 130px;padding-bottom: 0px;margin-top: -9px;">
+                  <button ion-button clear icon-only (click)="addToCart(worker.workerid)">
+                    <ion-icon color="mov" ios="ios-star" md="md-star"></ion-icon>
+                  </button>
+                  <button ion-button clear icon-only (click)="sendSMS(worker.companymobile)">
+                    <ion-icon color="mov" ios="ios-text" md="md-text" style="padding-top: 5px"></ion-icon>
+                  </button>
+                  <button ion-button clear icon-only>
+                    <a ion-text href="tel:{{worker.companymobile}}">
+                      <ion-icon color="mov" ios="ios-call" md="ios-call" style="padding-top: 9px"></ion-icon>
+                    </a>
+                  </button>
+         </ion-col>
+         <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+        </div>
+      </ion-row>
+    </ion-row>
+    <ion-row *ngSwitchCase="'Clean'">
+      <ion-row>
+         <div *ngFor="let ban of bannar">
+           <ion-card class="imagecard" >
+             <img src="{{ban.picpath}}">
+           </ion-card>
+         </div>
+      </ion-row>
+      <ion-row>
+        <div class="cardshow" *ngFor="let worker of workersEstkdam">
+          <div class="cimg" (click)="gotoDetails(worker.workerid)">
+            <img src="{{worker.picpath}}"/>
+          </div>
+          <div class="ctext">
+            <h6 class="ctitle">{{worker.name}}</h6>
+            <p class="cdet">{{worker.religion}}
+            {{worker.nationality}}
+            {{worker.occupation}}
+            {{worker.salary}} &ensp;{{worker.currency}}</p>
+            <a class="mo-re" (click)="gotoDetails(worker.workerid)">
+              {{'more' | translate}}
+            </a>
+          </div>
+           <ion-col col-2 style="max-height: 130px;padding-bottom: 0px;margin-top: -9px;">
+                  <button ion-button clear icon-only (click)="addToCart(worker.workerid)">
+                    <ion-icon color="mov" ios="ios-star" md="md-star"></ion-icon>
+                  </button>
+                  <button ion-button clear icon-only (click)="sendSMS(worker.companymobile)">
+                    <ion-icon color="mov" ios="ios-text" md="md-text" style="padding-top: 5px"></ion-icon>
+                  </button>
+                  <button ion-button clear icon-only>
+                    <a ion-text href="tel:{{worker.companymobile}}">
+                      <ion-icon color="mov" ios="ios-call" md="ios-call" style="padding-top: 9px"></ion-icon>
+                    </a>
+                  </button>
+         </ion-col>
+            <ion-infinite-scroll (ionInfinite)="Infinite($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+        </div>
+      </ion-row>
+    </ion-row>
+  </ion-row>
+  
+</ion-content>

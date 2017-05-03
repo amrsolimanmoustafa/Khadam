@@ -1,0 +1,307 @@
+page-favorites {}
+//  .item-md {
+//    position: relative;
+//    padding-right: 0;
+//    font-size: 1.6rem;
+//    font-weight: normal;
+//    text-transform: none;
+//    color: #000;
+//    background-color: #fff;
+//    box-shadow: none;
+//    transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+//
+//  }
+//  ion-card img {
+//    display: block;
+//    width: 100%;
+//    height: 112px;
+//  }
+//  ion-icon {
+//    font-size: 2.2em;
+//  }
+//  ion-card.myCard.card.card-ios {
+//    //margin: 7px 10px 10px -99px;
+//    width: 99%;
+//    border-radius: 12px;
+//    font-size: 1.4rem;
+//    background: #fff;
+//    height: 22%;
+//    border: 1px solid #b5a4a4;
+//    margin-top: 5%;
+//    margin-left: 0px;
+//    margin-right: 0px;
+//  }
+//  ion-card.myCard.card.card-md {
+//    //margin: 7px 10px 10px -99px;
+//    width: 99%;
+//    border-radius: 12px;
+//    font-size: 1.4rem;
+//    background: #fff;
+//    height: 22%;
+//    border: 1px solid #b5a4a4;
+//    margin-top: 5%;
+//    margin-left: 0px;
+//    margin-right: 0px;
+//  }
+//  .card-md {
+//    width: 110%;
+//    border-radius: 2px;
+//    font-size: 1.4rem;
+//    background: #fff;
+//    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+//    margin: -14px;
+//    /* padding: 0px; */
+//  }
+//  ion-card.imagecard.card.card-ios {
+//    width: 110%;
+//    border-radius: 2px;
+//    font-size: 1.4rem;
+//    background: #fff;
+//    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+//    margin: -14px;
+//  }
+//  ion-col {
+//    display: block;
+//    -webkit-flex: 1;
+//    -ms-flex: 1;
+//    flex: 1;
+//    padding: 4px;
+//    width: 100%;
+//    text-align: start;
+//    margin-left: 4%;
+//  }
+//  .card-md .text-md-dark {
+//    color: #222;
+//    width:180px;
+//    white-space: nowrap;
+//    overflow:hidden !important;
+//    text-overflow: ellipsis;
+//  }
+//  button.disable-hover.button.button-md.button-default.button-default-md.button-md-mov {
+//    width: 60%;
+//    height: 99%;
+//    text-transform: none;
+//  }
+//  button.disable-hover.button.button-ios.button-default.button-default-ios.button-ios-mov {
+//    width: 60%;
+//    height: 99%;
+//    text-transform: none;
+//  }
+//  ion-thumbnail {
+//    border: 1px solid  #9c398d;
+//    width: 157%;
+//    margin-left: -6px;
+//    margin-top: 9%;
+//  }
+//  .card-md .text-md-mov {
+//    color: #9c398d;
+//    padding-left: 4px;
+//  }
+//  ion-col.butt {
+//    display: -webkit-inline-box;
+//    background-color: #9c398d;
+//  }
+//  .button-md-mov {
+//    color: #fff;
+//    background-color: #9c398d;
+//    width: 53%;
+//    height: 72%;
+//    text-transform: none;
+//    margin-left: -2%;
+//  }
+//  ion-row.roww {
+//    display: -webkit-inline-box;
+//    width: 163%;
+//    margin-left: 30%;
+//  }
+//  ion-list.liss.list.list-md {
+//    margin-left: 15%;
+//    margin-top: -14%;
+//  }
+//  ion-row.religon {
+//    margin-top: -6%;
+//    margin-left:30%;
+//  }
+//  ion-row.nationalty {
+//    margin-top: -8%;
+//    margin-left:30%;
+//  }
+//  ion-row.salary {
+//    margin-top: -4%;
+//    margin-left: 30%;
+//  }
+//  ion-row.more {
+//    margin-top: -7%;
+//    margin-left: 30%;
+//  }
+//  .button[icon-only] {
+//    min-width: .9em;
+//    margin-left: 65%;
+//    margin-top: -5%;
+//  }
+//  button.disable-hover.button.button-ios.button-clear.button-clear-ios {
+//    min-width: .9em;
+//    margin-left: 65%;
+//    margin-top: -12%;
+//  }
+//  //img {
+//  //  height: 100px;
+//  //  max-width: 100%;
+//  //}
+//
+//
+//  h6.work.text.text-md.text-md-mov {
+//    margin-top: 6%;
+//    text-transform: none;
+//  }
+//  h6.nameheader.text.text-md.text-md-dark {
+//    font-weight: 700;
+//  }
+//  h6.nameheader.text.text-ios.text-ios-dark {
+//    font-weight: 700;
+//  }
+//
+//  h6.work.text.text-md.text-md-light {
+//    margin-top: 6%;
+//    text-transform: none;
+//  }
+//  h6.work.text.text-ios.text-ios-light {
+//    margin-top: 4%;
+//    text-transform: none;
+//  }
+//  .segment-md .segment-button.activated, .segment-md .segment-button.segment-activated{
+//    border-color: #9c398d;
+//    opacity: 1;
+//  }
+//  .segment-ios .segment-button.segment-activated {
+//    color: #fff;
+//    border-bottom-color: #9c398d;
+//    background-color: #eae3ea;
+//    opacity: 1;
+//    transition: 100ms all linear;
+//  }
+//  ion-segment.segment.segment-md.ng-untouched.ng-valid.ng-dirty {
+//    /*
+//    margin-top: -7%;
+//    */
+//  }
+//  .controlcards {
+//    margin-top: 6%;
+//  }
+//  .segmenttop{
+//    margin-top: -7%;
+//  }
+//  ion-segment {
+//    display: -webkit-flex;
+//    display: -ms-flexbox;
+//    display: flex;
+//    -webkit-flex: 1;
+//    -ms-flex: 1;
+//    flex: 1;
+//    -webkit-align-items: center;
+//    -ms-flex-align: center;
+//    /* align-items: baseline; */
+//    -webkit-justify-content: center;
+//    -ms-flex-pack: center;
+//    justify-content: center;
+//    width: 119%;
+//    margin-left: -9%;
+//    margin-right: -5%;
+//  }
+//  .segment-ios .segment-button {
+//    -webkit-flex: 1;
+//    -ms-flex: 1;
+//    flex: 1;
+//    width: 0;
+//    height: 3.2rem;
+//    border-width: 1px;
+//    border-style: solid;
+//    border-color: #eae3ea;
+//    font-size: 1.3rem;
+//    line-height: 3rem;
+//    color: #387ef5;
+//    background-color: transparent;
+//  }
+//  @media screen and (max-width: 320px) {
+//    //img {
+//    //  height: 83px;
+//    //  max-width: 100%;
+//    //}
+//    ion-row.more {
+//      margin-top: -21%;
+//    }
+//    ion-row.religon {
+//      margin-top: -13%;
+//    }
+//    .button[icon-only] {
+//      min-width: .9em;
+//      margin-left: 65%;
+//      margin-top: -12%;
+//    }
+//    h6.nameheader.text.text-ios.text-ios-dark {
+//    font-weight: 700;
+//    width: 110px;
+//}
+//button.disable-hover.button.button-ios.button-clear.button-clear-ios {
+//    min-width: .9em;
+//    margin-left: 65%;
+//    margin-top: -8%;
+//}
+//  .card-ios .text-ios-dark {
+//    color: #222;
+//    width: 100px;
+//}
+//button.disable-hover.button.button-ios.button-default.button-default-ios.button-ios-mov {
+//    width: 92%;
+//    height: 93%;
+//    text-transform: none;
+//    margin-top: 10px;
+//}
+//
+//  }
+//
+//
+//  @media screen and (min-width: 600px) {
+//    ion-card.myCard.card.card-md {
+//      width: 100%;
+//      border-radius: 12px;
+//      font-size: 1.4rem;
+//      background: #fff;
+//      height: 22%;
+//      border: 1px solid #b5a4a4;
+//      margin-top: 4px;
+//    }
+//    ion-card img {
+//      display: block;
+//      width: 100%;
+//      height: 122px;
+//    }
+//    ion-card img {
+//      display: block;
+//      width: 100%;
+//      height: 122px;
+//    }
+//    .button[icon-only] {
+//      min-width: .9em;
+//      margin-left: 65%;
+//      margin-top: 0%;
+//    }
+//    ion-row.nationalty {
+//      margin-top: 0px;
+//      margin-left: 12%;
+//      margin-right: 12%;
+//    }
+//    ion-row.salary {
+//      margin-top: -4%;
+//      margin-left: 12%;
+//      margin-right: 12%;
+//    }
+//    ion-row.religon {
+//      margin-top: 0px;
+//      margin-left: 12%;
+//      margin-right: 12%;
+//    }
+//
+//  }
+//
+//}

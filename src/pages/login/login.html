@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-navbar color="mov">
+    <button ion-button menuToggle >
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{'login' | translate}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="bg" padding>
+  <ion-list no-lines>
+    <ion-item class="cc">
+      <img src="assets/imgs/icon.png" height="125">
+    </ion-item>
+    <br>
+    <ion-item class="inp" dir="rtl">
+      <ion-input type="text" placeholder="{{'Username'| translate }}" [(ngModel)]="registerCredentials.username" required></ion-input>
+    </ion-item>
+    <ion-item class="inp lst" dir="rtl">
+      <ion-input type="password" placeholder="{{'Password'| translate }}" [(ngModel)]="registerCredentials.password" required></ion-input>
+    </ion-item>
+    <ion-item class="lin" dir="rtl" (click)="forgetPassword()">
+      <a>{{'Forgot Password' | translate}}</a>
+    </ion-item>
+    <ion-item>
+      <button ion-button block class="btn-in" (click)="login()">
+        {{'login' | translate}}
+      </button>
+      <button ion-button block class="btn-up" color="graay" (click)="createAccount()" >
+        {{'Create New Account' | translate}}
+      </button>
+    </ion-item>
+  </ion-list>
+
+ <!-- <div [@flyInBottomFast]="cloudState">
+    <ion-row class="logo-row">
+      <ion-col></ion-col>
+      <ion-col width-67>
+        <img [@flyInBottomSlow]="logoState" src="assets/imgs/1.jpg">
+      </ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+    <div class="login-box">
+      <form (ngSubmit)="login()" #registerForm="ngForm">
+        <ion-row>
+          <ion-col>
+            <ion-list [@bounceInBottom]="formState">
+              <ion-item>
+                <ion-label stacked id="lbl-28">{{'Username'| translate }}</ion-label>
+                <ion-input type="text" name="username" [(ngModel)]="registerCredentials.username" required></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label stacked id="lbl-28">{{'Password'| translate }}</ion-label>
+                <ion-input type="password" name="password" [(ngModel)]="registerCredentials.password" required></ion-input>
+              </ion-item>
+            </ion-list>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col class="signup-col">
+            <button ion-button block class="login" [@fadeIn]="loginState" color="mov" type="submit" [disabled]="!registerForm.form.valid">{{'Login' | translate}}</button>
+          </ion-col>
+        </ion-row>
+      </form>
+      <button ion-button  class="register-btn" block clear (click)="createAccount()">{{'Create New Account' | translate}}</button>
+      <button ion-button  class="register-btn" block clear (click)="forgetPassword()">{{'Forgot Password' | translate}}</button>
+    </div>
+  </div>
+-->
+</ion-content>

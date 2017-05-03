@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-navbar color="mov">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{'Dashboard'|translate}}</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="gotoSearch()">
+        <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content padding style="background-color: #eae3ea">
+
+
+
+  <ion-card (click)="goTo('addworker')" *ngIf="user.specialtyid != 3">
+    <ion-card-header>
+      {{'Add New Worker'| translate}}
+    </ion-card-header>
+    <ion-card-content>
+      <img src="assets/imgs/add.png" class="nav-img">
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card (click)="goTo('myworkers')" *ngIf="user.specialtyid != 3 ">
+    <ion-card-header>
+      {{'My Workers'| translate}}
+    </ion-card-header>
+    <ion-card-content>
+      <img src="assets/imgs/workers.png" class="nav-img">
+    </ion-card-content>
+  </ion-card>
+
+
+  <ion-card (click)="goTo('myorders')">
+    <ion-card-header>
+      {{'My Orders'| translate}}
+    </ion-card-header>
+    <ion-card-content>
+      <img src="assets/imgs/orders.png" class="nav-img">
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-card (click)="goTo('myfavorites')">
+    <ion-card-header>
+      {{'My favorites' | translate}}
+    </ion-card-header>
+    <ion-card-content>
+      <img src="assets/imgs/star.png" class="nav-img">
+    </ion-card-content>
+  </ion-card>
+
+
+  <ion-card (click)="goTo('editprofile')">
+    <ion-card-header >
+      {{'Edit Profile' | translate}}
+    </ion-card-header>
+    <ion-card-content>
+      <img src="assets/imgs/profile.png" class="nav-img">
+    </ion-card-content>
+  </ion-card>
+</ion-content>

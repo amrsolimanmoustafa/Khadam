@@ -1,0 +1,589 @@
+page-servant-details {
+  .formitem{
+    border:1px solid #9c398d;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right:auto;
+    width: 95%;
+    padding: 10px;
+  }
+  .itemback{
+    background-color: #Cecece;
+    color:black;
+  }
+  #map {
+    width: 100%;
+    display: block;
+    min-height: 400px;
+    position: relative;
+    height: 70vh !important;
+  }
+  ion-content.content.content-md {
+    min-height: 33vh !important;
+  }
+  ion-icon.icon.icon-ios.icon-ios-mov.ion-ios-pin.item-icon {
+    font-size: xx-large;
+    margin-left: 50%;
+    margin-right: 50%;
+}
+  /*
+
+    .swiper-container {
+      width: 100%;
+      height: 83%;
+      padding: 0;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      overflow: hidden;
+    }
+    .cent {
+      display: -webkit-inline-box;
+      margin-left: 34%;
+    }
+
+    ion-col.mybutton.col {
+      margin-top: 130px;
+      display: -webkit-inline-box;
+      margin-left: -26px;
+    }
+    button.cv.button.button-md.button-default.button-default-md.button-md-mov {
+      width: 70px;
+      height: 24px;
+      text-transform: none;
+      margin-bottom: 0px;
+      margin-left: -13px;
+      margin-top: -5px;
+    }
+    button.cv.disable-hover.button.button-ios.button-default.button-default-ios.button-ios-mov {
+      width: 77px;
+      height: 31px;
+      margin-top: auto;
+      text-transform: none;
+    }
+    button.btn-last.disable-hover.button.button-ios.button-clear.button-clear-ios {
+      margin-left: -22px;
+    }
+    button.btn-last.disable-hover.button.button-md.button-clear.button-clear-md {
+      margin-left: -22px;
+    }
+    .button[icon-only] {
+      min-width: .9em;
+      margin-left: -25%;
+      margin-top: -5%;
+    }
+    .card-header-md {
+      padding: 2px;
+      font-size: 1.6rem;
+      background-color: #9c398d;
+      margin-top: 0px;
+      width: 152%;
+      margin-left: -92px;
+      height: 38px;
+      margin-right: -100px;
+    }
+
+    ion-card-header.card-header.card-header-ios {
+      padding: 2px;
+      font-size: 1.6rem;
+      background-color: #9c398d;
+      margin-top: 0%;
+      width: 152%;
+      margin-left: -92px;
+      height: 48px;
+      margin-right: -100px;
+    }
+    h6.text.text-ios.text-ios-graay {
+      margin-left: 9px;
+    }
+    ion-content.content.content-ios {
+      min-height: 27vh !important;
+    }
+
+    .list-ios {
+      margin: 10px 0 32px 0;
+    }
+    .item-ios .text-ios-graay {
+      color: #58595b;
+      margin-right: 26px;
+      margin-left: 50px;
+    }
+    .text-ios-light {
+      color: #f4f4f4;
+      margin-top: 10px;
+      font-size: larger;
+    }
+    ion-label.label.label-ios {
+      color: #ffffff;
+      margin-right: -28px;
+      margin-left: -28px;
+    }
+    .myslider {
+      margin: -64px;
+      margin-left: -4%;
+      margin-right: -10px;
+      padding: 5px;
+      width: 108%;
+      height: 47%;
+      min-height: 130px;
+      border: 1px solid #9c398d;
+      .slideImg {
+        width: 100%;
+        height: 180px;
+        display: block;
+        margin: auto;
+      }
+    }
+
+    .header {
+      text-align: center;
+      !*font-family: 'TR Oregon';*!
+      !* font-size: x-large;
+       font-weight: 800;*!
+    }
+    page-servant-details h2.text.text-md {
+      margin-top: 5px;
+      margin-left: 6% !important;;
+      margin-right: 5% !important;
+      !*
+      font-weight: 600;
+      *!
+    }
+    .label-ios {
+      display: -webkit-inline-box;
+      !*
+      font-family: 'TR Oregon';
+      *!
+      !*
+      font-weight: 800;
+      *!
+      text-align: center;
+    }
+    .item-md h2 {
+      margin: -3px 0 0;
+      !*
+      font-family: 'TR Oregon';
+      *!
+      !*
+      font-weight: 800;
+      *!
+    }
+    .item-ios h3 {
+      margin: -3px 36% 0;
+      !*
+      font-family: 'TR Oregon';
+      *!
+      !*
+      font-weight: 800;
+      *!
+    }
+    .item-md h3 {
+      margin: -3px 36% 0;
+      !*
+      font-family: 'TR Oregon';
+      *!
+      !*
+      font-weight: 800;
+      *!
+    }
+    .label-md {
+      margin: 13px 8px 13px 0;
+      display: -webkit-inline-box;
+      !*
+      font-family: 'TR Oregon';
+      *!
+      !*
+      font-weight: 800;
+      *!
+      text-align: center;
+    }
+    h2.text.text-md {
+      margin-top: 5px;
+      margin-left: 3%;
+      margin-right: 3%;
+    }
+    ion-thumbnail {
+      border: 1px solid #9c398d;
+      width: 157%;
+      margin-left: -6px;
+      margin-top: 90%;
+    }
+    img {
+      height: 100px;
+      max-width: 100%;
+      width: 100%;
+    }
+    button.send.disable-hover.button.button-md.button-default.button-default-md.button-md-mov {
+      margin-right: 13px;
+      height: 26px;
+      text-transform: none;
+      margin-top: -2px;
+    }
+    ion-row.servName {
+      margin-top: 28%;
+      width: 202px;
+      white-space: nowrap;
+      overflow: hidden !important;
+      text-overflow: ellipsis;
+    }
+    ion-row.ios-star {
+      margin-top: 40%;
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+    ion-row.ios-text {
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+    ion-row.ios-call {
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+
+    ion-item.backcolor.item.item-block.item-md {
+      background-color: #Cecece;
+      width: 113% !important;
+      margin-left: -4% !important;
+    }
+    ion-item.backcolor.item.item-block.item-ios {
+      background-color: #Cecece;
+      width: 110%;
+      margin-left: -5%;
+    }
+    ion-item.othercolor.item.item-block.item-md {
+      width: 113%;
+      margin-left: -4%;
+    }
+    ion-item.othercolor.item.item-block.item-ios {
+      width: 110%;
+      margin-left: -5%;
+    }
+    .list-md .item-block .item-inner {
+      border-bottom: 1px solid #dedede;
+    }
+    !* button.send.disable-hover.button.button-md.button-default.button-default-md.button-md-mov {
+       !* margin-top: -14%;
+        float: right;*!
+      !* margin-left: 15%;*!
+       margin-right: 23%;
+     }*!
+    .lastbuttons {
+      margin-left: 66px;
+      margin-top: -21px;
+      margin-right: 38px;
+    }
+    ion-label#lbl-21 {
+      color: #7d7d7f;
+      font-weight: 400;
+    }
+    ion-note.addres.note.note-md.text.text-md.note-md-graay.text-md-graay {
+      margin-left: -16%;
+    }
+    ion-icon#pin {
+      margin-left: -51%;
+    }
+    !*  ion-col.mybutton {
+        margin-top: 5%;
+      }*!
+    ion-label#lbl-29 {
+      color: #58595b;
+      font-size: medium;
+    }
+    ion-label#lbl-30 {
+      color: #58595b;
+      font-size: medium;
+    }
+    ion-label#lbl-31 {
+      color: #58595b;
+      font-size: medium;
+    }
+    ion-label#lbl-32 {
+      color: #58595b;
+      font-size: medium;
+    }
+    ion-label#lbl-33 {
+      color: #58595b;
+      font-size: medium;
+      margin-left: 20px;
+    }
+    ion-label#lbl-34 {
+      color: #58595b;
+      font-size: medium;
+    }
+    ion-label#lbl-35 {
+      color: #58595b;
+      font-size: medium;
+    }
+    ion-label#lbl-36 {
+      color: #58595b;
+      font-size: medium;
+    }
+    ion-label#lbl-37 {
+      color: #58595b;
+      font-size: medium;
+    }
+    ion-label#lbl-38 {
+      color: #58595b;
+      margin-left: 20px;
+      font-size: medium;
+    }
+    h2.text.text-md.text-md-light {
+      font-size: 1.2em;
+      font-weight: 400;
+    }
+    .orderform {
+      !*
+      border: 1px solid #9c398d;
+      *!
+      !*     width: 382px;
+       *!
+      margin-left: 16px;
+      height: 415px;
+      margin-right: 16px;
+    }
+
+    .item-label-stacked .text-input-md, .item-label-floating .text-input-md {
+      margin-top: 8px;
+      margin-bottom: 8px;
+      margin-left: 0;
+      width: calc(100% - 8px);
+      !*height: 15px;*!
+    }
+    .item-md .text-md-graay {
+      color: #58595b;
+      margin-left: 44px;
+      white-space: nowrap;
+      overflow: hidden !important;
+      text-overflow: ellipsis;
+      margin-right: 34px;
+    }
+    #map {
+      width: 100%;
+      display: block;
+      min-height: 400px;
+      position: relative;
+      height: 70vh !important;
+    }
+    ion-content.content.content-md {
+      min-height: 33vh !important;
+    }
+    ion-col.col {
+      margin-top: 0px;
+    }
+    .item-md {
+      position: relative;
+      padding-right: 0;
+      font-size: 1.6rem;
+      font-weight: normal;
+      text-transform: none;
+      color: #000;
+      background-color: #fff;
+      box-shadow: none;
+      transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    }
+    ion-card img {
+      display: block;
+      width: 100%;
+      height: 112px;
+    }
+    ion-icon {
+      font-size: 2.2em;
+    }
+    ion-card.myCard.card.card-ios {
+      //margin: 7px 10px 10px -99px;
+      width: 99%;
+      font-size: 1.4rem;
+      background: #fff;
+      height: 22%;
+      margin-top: 5%;
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+    ion-card.myCard.card.card-md {
+      //margin: 7px 10px 10px -99px;
+      width: 99%;
+      font-size: 1.4rem;
+      background: #fff;
+      height: 22%;
+      margin-top: 5%;
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+    .nameheader {
+      margin-bottom: 10px;
+    }
+    h6.nameheader.text.text-ios.text-ios-dark {
+      margin-top: 10px;
+    }
+    ion-row.roww {
+      display: -webkit-inline-box;
+      width: 260%;
+      margin-left: 30%;
+      margin-top: 21%;
+    }
+    .card-md {
+      width: 110%;
+      font-size: 1.4rem;
+      background: #fff;
+      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+      margin: -14px;
+    }
+    ion-item.forma.item.item-block.item-md.item-input {
+      margin-bottom: 10px;
+      padding-left: 0px !important;
+      margin-bottom: 10px;
+      border: 1px solid #9c398d;
+    }
+    ion-item.forma.item.item-block.item-ios.item-input {
+      margin-bottom: 10px;
+      padding-left: 5px !important;
+      margin-bottom: 10px;
+      border: 1px solid #9c398d;
+    }
+    .iconsend.disable-hover.button.button-md.button-default.button-default-md.button-md-mov {
+
+      height: 2.6em !important;
+    }
+
+    button.p-icon.disable-hover.item-button.button.button-md.button-clear.button-clear-md{
+      margin-left: 7px;
+      font-size: medium;
+      margin-top: 6px;
+
+    }
+    button.p-icon.disable-hover.item-button.button.button-ios.button-clear.button-clear-ios{
+      margin-left: 7px;
+      font-size: medium;
+      margin-top: 6px;
+    }
+    .p-button {
+      margin-left: 93px;
+      margin-right: 93px;
+    }
+    h6.companyname {
+      margin-bottom: 18px;
+    }
+    .b-button {
+      margin-bottom: 34px;
+      margin-left: 9px;
+    }
+    button.b-icon.disable-hover.button.button-md.button-clear.button-clear-md {
+      font-size: medium;
+      margin-left: -8px;
+      margin-top: auto;
+    }
+    button.b-icon.disable-hover.button.button-ios.button-clear.button-clear-ios {
+      font-size: medium;
+      margin-left: -8px;
+      margin-top: auto;
+    }
+    @media screen and (min-width: 600px) {
+      .text-input-md {
+        width: calc(100% - 8px - 17px);
+        margin: 13px 8px 13px 17px;
+      }
+      ion-card.myCard.card.card-md {
+        margin: 7px 10px 10px -13px;
+        width: 105%;
+        border-radius: 12px;
+        font-size: 1.4rem;
+        background: #fff;
+        height: 22%;
+        border: 1px solid #b5a4a4;
+        margin-top: 4px;
+      }
+      ion-row.nationalty {
+        margin-top: 0px;
+        margin-left: 8%;
+      }
+      ion-row.row.row {
+        margin-bottom: 15px;
+      }
+      ion-row.religon {
+        margin-top: 0px;
+        margin-left: 8%;
+      }
+      ion-thumbnail {
+        border: 1px solid #9c398d;
+        width: 157%;
+        margin-left: -6px;
+        margin-top: 76%;
+      }
+      ion-row.servName {
+        margin-top: 28%;
+        width: 202px;
+        white-space: nowrap;
+        overflow: hidden !important;
+        text-overflow: ellipsis;
+        margin-left: 22px;
+      }
+      ion-row.compserv {
+        !* margin-top: 28%; *!
+        width: 202px;
+        white-space: nowrap;
+        overflow: hidden !important;
+        text-overflow: ellipsis;
+        margin-left: 22px;
+      }
+      ion-thumbnail.thumbimg {
+        border: 1px solid #9c398d;
+        !* width: 27%; *!
+        padding: 2px;
+        margin-top: 41%;
+        margin-left: 0px;
+      }
+      page-servant-details .myslider .slideImg {
+        height: 336px;
+        display: block;
+        margin-top: -2%;
+      }
+      .card-header-md {
+        padding: 2px;
+        font-size: 1.6rem;
+        background-color: #9c398d;
+        margin-top: -6%;
+        width: 152%;
+        margin-left: -150px;
+        height: 38px;
+        margin-right: -200px;
+      }
+      h2.text.text-md {
+        margin-top: 5px;
+        margin-left: 5%;
+        margin-right: 5%;
+      }
+      .item-md .text-md-graay {
+        color: #58595b;
+        margin-left: 96px;
+        white-space: nowrap;
+        overflow: hidden !important;
+        text-overflow: ellipsis;
+        margin-right: 48px;
+      }
+      //ion-col.mybutton.col{
+      //  margin-top: 12%;
+      //  margin-left: 162px;
+      //}
+
+      .orderform {
+        border: 1px solid #9c398d;
+        width: 575px;
+        margin-left: 16px;
+        height: 415px;
+        margin-right: 16px;
+      }
+      !*.lastbuttons{
+        margin-left: 191px;
+        margin-right: 175px;
+      }*!
+      .button[icon-only] {
+        padding: 0;
+        min-width: .9em;
+        margin-left: 46px;
+      }
+    }
+
+
+  */
+}

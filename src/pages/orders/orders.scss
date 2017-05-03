@@ -1,0 +1,38 @@
+page-orders {
+  .worker-img{
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 10px;
+    border: 1px #e7e7e7 solid;
+    background-color: #eee;
+  }
+  .bottom-hr{
+    border-bottom: 1px solid #e7e7e7;
+    padding-bottom: 7px;
+    margin-bottom: 7px;
+  }  
+  .narrow{
+    height: 21px;
+    width: 30px;
+    float: right;
+    margin-top: -12px;
+  }
+  .date{
+    font-size: 12px;
+  }
+  .worker-details{
+      tr{
+        td{
+            text-align: justify;
+            padding: 2px 5px;
+            vertical-align: top;
+          }
+      }
+    &::after{
+      content: "*";
+      color:transparent;
+    }
+  }
+}

@@ -1,0 +1,210 @@
+<ion-header>
+
+  <ion-navbar color="mov">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{'Worker Details' | translate}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<ion-content>
+  <div dir="ltr" *ngFor="let serv of servant" style="margin-bottom: 10px;margin-top: 65px;">
+    <ion-grid>
+      <ion-row>
+        <ion-col col-4 style="max-height:133px;border: 1px solid black" padding>
+          <ion-thumbnail item-left style="height: 100%">
+            <img src="{{serv.image}}" height="100%" width="100%"style="max-height:130px"/>
+          </ion-thumbnail>
+        </ion-col>
+        <ion-col col-8 style="max-height: 133px;padding-bottom: 0px;">
+          <h6 ion-text item-left color="dark" style="margin-top: 0px;width:300px">{{serv.name}}</h6>
+          <h6 ion-text item-left color="dark">{{serv.company}}</h6>
+          <ion-row>
+            <ion-col col-5 style="margin-top: 21px;margin-left: -6px;">
+              <button style="height: 31px;width: 83px;margin-top: 6px;" ion-button color="mov"  (click)="presentProfileModal(serv.workerid)"><span style="padding-top: 2px">{{'watch cv' | translate}}</span></button>
+            </ion-col>
+            <ion-col col-2 style="margin-top: 22px;">
+              <button ion-button clear icon-only (click)="addToCart(serv.workerid)" >
+                <ion-icon color="mov" ios="ios-star" md="md-star"></ion-icon>
+              </button>
+            </ion-col >
+            <ion-col col-2 style="margin-top: 24px;">
+              <button ion-button clear icon-only (click)="sendSMS(serv.companymobile)">
+                <ion-icon color="mov" ios="ios-text" md="md-text"></ion-icon>
+              </button>
+            </ion-col>
+            <ion-col col-2 style="margin-top: 25px;">
+              <button ion-button clear icon-only >
+                <a ion-text href="tel:{{serv.companymobile}}">
+                  <ion-icon color="mov" ios="ios-call" md="ios-call"></ion-icon>
+                </a>
+              </button>
+            </ion-col>
+          </ion-row>
+
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <div *ngFor="let serv of servant" style="border:1px solid black;height: 300px">
+    <ion-slides pager  [autoplay]="2000" [loop]="true" dir="ltr">
+
+      <ion-slide dir="ltr" *ngIf="serv.image">
+        <img src="{{serv.image}}" dir="ltr"/>
+      </ion-slide>
+
+      <ion-slide *ngIf="serv.image2" dir="ltr">
+        <img src="{{serv.image2}}" dir="ltr"/>
+      </ion-slide>
+
+      <ion-slide  *ngIf="serv.image3" dir="ltr">
+        <img (click)="presentProfileModal(serv.workerid)" src="{{serv.image3}}" dir="ltr"/>
+      </ion-slide>
+
+    </ion-slides>
+
+  </div>
+  <div *ngFor="let serv of servant" style="margin-top: 15px">
+    <ion-list>
+      <ion-list-header style="background-color:#9c398d;text-align: center; color:white" >
+        {{'Personal Details' | translate}}
+      </ion-list-header>
+      <ion-item class="itemback">
+        <h2 ion-text color="graay">{{'Name' | translate}} :</h2>
+        <ion-note item-right ion-text color="dark"> {{serv.name}}</ion-note>
+      </ion-item>
+
+      <ion-item>
+        <h2 ion-text color="graay">{{'Nationality' | translate}} :</h2>
+        <ion-note item-right ion-text color="dark">{{serv.nationality}}</ion-note>
+      </ion-item>
+
+      <ion-item class="itemback">
+        <h2 ion-text color="graay">{{'Religion' | translate}} :</h2>
+        <ion-note item-right ion-text color="dark">{{serv.religion}}</ion-note>
+      </ion-item>
+
+      <ion-item>
+        <h2 ion-text color="graay">{{'Occupation' | translate}} :</h2>
+        <ion-note item-right ion-text color="dark">{{serv.occupation}}</ion-note>
+      </ion-item>
+
+      <ion-item class="itemback">
+        <h2 ion-text color="graay">{{'Marital Status' | translate}} :</h2>
+        <ion-note item-right ion-text color="dark">{{serv.status}}</ion-note>
+      </ion-item>
+
+      <ion-item>
+        <h2 ion-text color="graay">{{'Gender' | translate}} :</h2>
+        <ion-note item-right ion-text color="dark">{{serv.gender}}</ion-note>
+      </ion-item>
+
+      <ion-item class="itemback">
+        <h2 ion-text color="graay">{{'Age' | translate}} :</h2>
+        <ion-note item-right ion-text color="dark">{{serv.age}}</ion-note>
+      </ion-item>
+
+      <ion-item>
+        <h2 ion-text color="graay">{{'Salary' | translate}} :</h2>
+        <ion-note item-right ion-text color="dark">{{serv.salary}}</ion-note>
+      </ion-item>
+
+      <ion-item class="itemback">
+        <h2 ion-text color="graay">{{'Birth Date' | translate}} :</h2>
+        <ion-note item-right ion-text color="dark">{{serv.birth_date}}</ion-note>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <div *ngFor="let serv of servant" style="margin-top: 15px">
+    <ion-list>
+      <ion-list-header style="background-color:#9c398d;text-align: center; color:white" >
+        {{'Company Details' | translate}}
+      </ion-list-header>
+      <ion-item class="itemback">
+        <h2 ion-text color="graay">{{'Company Name' | translate}} :</h2>
+        <ion-note item-right ion-text  color="dark"> {{serv.company}}</ion-note>
+      </ion-item>
+
+      <ion-item >
+        <h2 ion-text color="graay">{{'E-Mail' | translate}} :</h2>
+        <ion-note item-right ion-text color="dark">{{serv.email}}</ion-note>
+      </ion-item>
+
+      <ion-item class="itemback">
+        <h2 ion-text color="graay">{{'Mobile' | translate}} :</h2>
+        <ion-note item-right ion-text color="dark">
+          <a href="tel:{{serv.companymobile}}">
+            {{serv.mobile}}
+          </a>
+        </ion-note>
+      </ion-item>
+
+      <ion-item>
+        <h2 ion-text color="graay">{{'WhatsApp' | translate}} :</h2>
+        <ion-note item-right ion-text color="dark">{{serv.whatsapp}}</ion-note>
+      </ion-item>
+    <ion-item *ngIf="this.plt.is('ios')">
+        <h2 ion-text color="graay">{{'Location'|translate}}</h2>
+        <ion-icon name="pin" color="mov" (click)="showmap()"></ion-icon>
+    </ion-item>
+     <div *ngIf="this.plt.is('android')">
+        <div dir="ltr" value="Location">
+             <plain-map [lat]="this.globalService.maplat" [lng]="this.globalService.maplng"></plain-map>
+        </div>
+    </div>
+    </ion-list>
+  </div>
+
+  <div *ngFor="let serv of servant">
+    <ion-list>
+      <ion-list-header style="background-color:#9c398d;text-align: center; color:white">
+        {{'Order Now' | translate}}
+      </ion-list-header>
+      <div style="margin-top: 15px" *ngIf="globalService.loggedIn">
+        <ion-input class="formitem" [(ngModel)]="edituser.username" name="username" ngControl="username" type="text"
+                   placeholder="username"></ion-input>
+        <ion-input class="formitem" type="tel" [(ngModel)]="edituser.mobile" name="mobil" placeholder="Mobile"></ion-input>
+        <ion-input class="formitem" [(ngModel)]="edituser.email" type="email" name="email" ngControl="email" placeholder="Email"></ion-input>
+        <ion-textarea [(ngModel)]="message" class="formitem" rows="4" placeholder="Write your message"></ion-textarea>
+      </div>
+      <div style="margin-top: 15px" *ngIf="!globalService.loggedIn">
+        <ion-input class="formitem"  [(ngModel)]="username"  name="username" type="text" ngControl="name" placeholder="Username"></ion-input>
+        <ion-input class="formitem"  [(ngModel)]="mobile" type="tel" name="mobil" placeholder="Mobile"></ion-input>
+        <ion-input [(ngModel)]="email" ngControl="email" class="formitem" type="email" name="email" placeholder="Email"></ion-input>
+        <ion-textarea [(ngModel)]="message" class="formitem" rows="4" placeholder="Write your message"></ion-textarea>
+      </div>
+    </ion-list>
+  </div>
+
+  <div *ngFor="let serv of servant">
+    <ion-grid style="width: 65%;">
+      <ion-row>
+        <ion-col col-3>
+          <button  *ngIf="globalService.loggedIn" (click)="sendlogged(serv.workerid)" style="width: 100%;" ion-button color="mov">{{'send' | translate}}</button>
+          <button  *ngIf="!globalService.loggedIn" (click)="sendnotlogged(serv.workerid)" style="width: 100%;" ion-button color="mov">{{'send' | translate}}</button>
+        </ion-col>
+
+        <ion-col col-3>
+          <button ion-button clear icon-only (click)="addToCart(serv.workerid)">
+            <ion-icon color="mov" ios="ios-star" md="md-star"></ion-icon>
+          </button>
+        </ion-col>
+        <ion-col col-3>
+          <button ion-button clear icon-only (click)="send(serv.companymobile)">
+            <ion-icon color="mov" ios="ios-text" md="md-text"></ion-icon>
+          </button>
+        </ion-col>
+        <ion-col col-3>
+          <button class="p-icon" ion-button clear icon-only>
+            <a href="tel:{{serv.companymobile}}">
+              <ion-icon color="mov" ios="ios-call" md="ios-call"></ion-icon>
+            </a>
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

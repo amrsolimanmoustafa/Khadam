@@ -1,0 +1,57 @@
+maps-page {
+  .wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  ion-content {
+    background: rgb(229, 227, 223);
+  }
+  #map {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 150ms ease-in
+  }
+  #map.show-map {
+    opacity: 1;
+  }
+  #map.show-map {
+    opacity: 1;
+  }
+  .map-wrapper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .bottom {
+    position: absolute;
+    bottom: 0;
+    margin-left: 33%;
+    text-align: center;
+  }
+
+  .top {
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  .request-controls {
+    text-align: center;
+    background: linear-gradient(transparent, map-get($colors, light));
+  }
+
+  #locator {
+    pointer-events: none; // pass events to map
+    background-image: url('../../assets/person-icon.png');
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    margin-left: -25px;
+    margin-top: -50px; // bottom of image is location on map
+  }
+
+}

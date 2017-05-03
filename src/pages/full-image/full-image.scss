@@ -1,0 +1,28 @@
+page-full-image {
+  .sample-modal-page {
+    /*
+    padding: 30px;
+    */
+    background: rgba(0,0,0,0.5);
+  }
+  .disabledfeature{
+    color: #8f8f8f;
+  }
+  .scroll-content {
+    padding: 16px;
+    background: rgba(0,0,0,0.5);
+  }
+  ion-avatar img, ion-thumbnail img {
+    display: block;
+    width: 98%;
+    height: 655px;
+  }
+  button.button.button-md.button-default.button-default-md {
+    margin-left: 37%;
+  }
+  ion-icon {
+    display: inline-block;
+    font-size: 2.2em;
+    color: white;
+  }
+}

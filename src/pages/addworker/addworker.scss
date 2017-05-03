@@ -1,0 +1,19 @@
+page-addworker {
+  .bottom-hr{
+    border-bottom: 1px solid #e7e7e7;
+    padding-bottom: 7px;
+    margin-bottom: 7px;
+  }
+  .grayed{
+    color:gray!important;
+  }
+  .workerpic{
+    img{
+      width: 70px;
+      border-radius: 50%;
+      &:hover{
+        box-shadow: 0 0 15px rgba(255,255,255,0.9);
+      }
+    }
+  }
+}

@@ -1,0 +1,260 @@
+<!--
+  Generated template for the Editprofile page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="mov">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{'Profile'|translate}}</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="gotoSearch()">
+        <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item (click)="GalleryOrCamera()">
+    <ion-avatar item-center>
+      <img [src]="user.picpath" *ngIf="!base64Image">
+      <img [src]="base64Image" *ngIf="base64Image">
+    </ion-avatar>
+
+    <input type="file" name="userpic" id="userpic" style="display: none;"
+           accept="image/x-png, image/gif, image/jpeg"><label for="userpic"></label>
+  </ion-item>
+  <div padding>
+    <ion-segment color="mov" [(ngModel)]="accountSW">
+      <ion-segment-button color="mov" value="Account">
+        {{'Account'|translate}}
+      </ion-segment-button>
+      <ion-segment-button color="mov" value="Details">
+        {{'Details'|translate}}
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <div [ngSwitch]="accountSW">
+    <div *ngIf="user.membership == 1">
+      <form #registerForm="ngForm">
+        <ion-list value="Details" *ngSwitchCase="'Details'">
+          <ion-item>
+            <ion-label id="lbl-16">{{'Company Name' |translate}}</ion-label>
+            <ion-input   type="text" [(ngModel)]="user.name" name="name"
+                       ngControl="name"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label id="lbl-15">{{'Company Name ar' |translate}}</ion-label>
+            <ion-input pattern=".{2,}"  type="text" [(ngModel)]="user.namear" name="namear"
+                       ngControl="namear"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label id="lbl-17">{{'Username' |translate}}</ion-label>
+            <ion-input pattern=".{2,}"   type="text" [(ngModel)]="user.username" name="username"
+                       ngControl="username"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label id="lbl-18">{{'Password' |translate}}</ion-label>
+            <ion-input pattern=".{6,}"  type="password" [(ngModel)]="user.password" name="password"
+                       ngControl="password"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label id="lbl-19">{{'Mobile' |translate}}</ion-label>
+            <ion-input pattern=".{6,}"  type="tel" [(ngModel)]="user.mobile" name="mobil"
+                       ngControl="mobil"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label id="lbl-20">{{'Phone' |translate}}</ion-label>
+            <ion-input pattern=".{6,}"  type="tel" [(ngModel)]="user.tel" name="tel"
+                       ngControl="tel"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label id="lbl-21">{{'WhatsApp' |translate}}</ion-label>
+            <ion-input pattern=".{6,}"  type="tel" [(ngModel)]="user.whatsapp" name="whats"
+                       ngControl="whats"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label id="lbl-22">{{'E-Mail' |translate}}</ion-label>
+            <ion-input  type="email" [(ngModel)]="user.email" name="email" ngControl="email"></ion-input>
+          </ion-item>
+          <ion-item (click)="openMap()">
+            <ion-label id="lbl-23">{{'Address' |translate}}</ion-label>
+            <ion-input  type="text" [(ngModel)]="user.address" name="address" ngControl="address"
+                       disabled></ion-input>
+          </ion-item>
+          <ion-item *ngIf="edituser.map" (click)="openMap()">
+            <ion-label id="lbl-24">{{'Location' |translate}}</ion-label>
+            <ion-input  type="text" [(ngModel)]="user.map" name="map" ngControl="map" disabled></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label id="lbl-25" floating>{{'Company Details (AR)' |translate}}</ion-label>
+            <ion-textarea  type="text" [(ngModel)]="user.details_ar" name="details_ar"
+                          ngControl="details_ar"></ion-textarea>
+          </ion-item>
+          <ion-item>
+            <ion-label id="lbl-26" floating>{{'Company Details (EN)' |translate}}</ion-label>
+            <ion-textarea  type="text" [(ngModel)]="user.details_en" name="details_en"
+                          ngControl="details_en"></ion-textarea>
+          </ion-item>
+
+          <button ion-button class="submit-btn" full color="mov" (click)="updateCompanyProfile()">
+            {{'Update Profile'|translate}}
+          </button>
+
+        </ion-list>
+      </form>
+    </div>
+
+
+    <div *ngIf="user.membership == 0">
+      <form  #registerForm="ngForm">
+        <ion-list value="Details" *ngSwitchCase="'Details'">
+          <ion-item>
+            <ion-label id="lbl-28">{{'Username' |translate}}</ion-label>
+            <ion-input type="text" [(ngModel)]="user.username" name="username" ngControl="username"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label id="lbl-29">{{'Name' |translate}}</ion-label>
+            <ion-input type="text" [(ngModel)]="user.name" name="name" ngControl="name"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label id="lbl-30">{{'E-Mail' |translate}}</ion-label>
+            <ion-input  type="email" [(ngModel)]="user.email" name="email" ngControl="email"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label id="lbl-31">{{'Password' |translate}}</ion-label>
+            <ion-input pattern=".{6,}"  type="password" [(ngModel)]="user.password" name="password"
+                       ngControl="password"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label id="lbl-32">{{'Mobile' |translate}}</ion-label>
+            <ion-input pattern=".{6,}"  type="tel" [(ngModel)]="user.mobile" name="mobil"
+                       ngControl="mobil"></ion-input>
+          </ion-item>
+          <button ion-button class="submit-btn" full color="mov"  (click)="updatePersonProfile()">
+            {{'Update Profile'|translate}}
+          </button>
+        </ion-list>
+      </form>
+    </div>
+
+
+    <ion-list dir="ltr" value="Account" *ngSwitchCase="'Account'">
+
+      <div style="max-height:400px" *ngIf="user.membership == 1">
+        <div *ngIf="user.subscriptions == 'حساب ذهبى'">
+          <ion-card *ngFor="let account of gold">
+            <br>
+            <h2 class="servantName" ion-text color="rain">{{account.title}}</h2>
+            <p>
+              {{account.features}}
+            </p>
+            <h6>price</h6>
+            <p>{{account.price}}</p>
+            <p>{{account.workers_day_no}}</p>
+            <p>{{account.workers_no}}</p>
+            <br>
+            <br>
+          </ion-card>
+        </div>
+        <div *ngIf="user.subscriptions == 'حساب فضي'">
+          <ion-card *ngFor="let account of silver">
+            <br>
+            <h2 class="servantName" ion-text color="rain">{{account.title}}</h2>
+            <p>
+              {{account.features}}
+            </p>
+            <h6>price</h6>
+            <p>{{account.price}}</p>
+            <p>{{account.workers_day_no}}</p>
+            <p>{{account.workers_no}}</p>
+            <br>
+            <br>
+          </ion-card>
+        </div>
+        <div *ngIf="user.subscriptions == 'حساب عادي'">
+          <div *ngFor="let account of prime">
+            <ion-card>
+              <br>
+              <h2 class="servantName" ion-text color="rain">{{account.title}}</h2>
+              <p>
+                {{account.features}}
+              </p>
+              <h6>price</h6>
+              <p>{{account.price}}</p>
+              <p>{{account.workers_day_no}}</p>
+              <p>{{account.workers_no}}</p>
+              <br>
+              <!--
+                          <button ion-button color="infodet" round>{{'Upgrade'|translate}}</button>
+              -->
+              <br>
+            </ion-card>
+          </div>
+          <div>
+            <ion-card  *ngFor="let account of silver">
+              <br>
+              <h2 class="servantName" ion-text color="rain">{{account.title}}</h2>
+              <p>
+                {{account.features}}
+              </p>
+              <h6>price</h6>
+              <p>{{account.price}}</p>
+              <p>{{account.workers_day_no}}</p>
+              <p>{{account.workers_no}}</p>
+              <br>
+              <button ion-button (click)="payselvier(account.price , account.membershipsid)" color="infodet" round>{{'Upgrade'|translate}}</button>
+              <br>
+            </ion-card>
+          </div>
+          <div>
+            <ion-card *ngFor="let account of gold">
+              <br>
+              <h2 class="servantName" ion-text color="rain">{{account.title}}</h2>
+              <p>
+                {{account.features}}
+              </p>
+              <h6>price</h6>
+              <p>{{account.price}}</p>
+              <p>{{account.workers_day_no}}</p>
+              <p>{{account.workers_no}}</p>
+              <br>
+              <button ion-button (click)="paygold(account.price , account.membershipsid)" color="infodet" round>{{'Upgrade'|translate}}</button>
+              <br>
+            </ion-card>
+          </div>
+        </div>
+
+      </div>
+      <div style="max-height:400px" *ngIf="user.membership == 0">
+        <div *ngFor="let account of prime">
+          <ion-card>
+            <br>
+            <h2 class="servantName" ion-text color="rain">{{account.title}}</h2>
+            <p>
+              {{account.features}}
+            </p>
+            <h6>price</h6>
+            <p>{{account.price}}</p>
+            <p>{{account.workers_day_no}}</p>
+            <p>{{account.workers_no}}</p>
+            <br>
+
+            <button ion-button color="infodet" round (click)="payWorker()">{{'Pay to add worker'|translate}}</button>
+
+            <br>
+          </ion-card>
+        </div>
+
+      </div>
+    </ion-list>
+  </div>
+</ion-content>

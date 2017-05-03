@@ -1,0 +1,158 @@
+<!--
+  Generated template for the CompanyDetails page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="mov">
+
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{'Company Details' | translate}}</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="gotoSearch()">
+        <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+<div>
+  <ion-list *ngIf="company">
+    <ion-grid dir="ltr">
+      <ion-row>
+        <ion-col col-4 style="border: 1px solid black">
+          <ion-thumbnail item-left style="max-height: 100%;padding-top: 10px;">
+            <img src="{{company.picpath}}">
+          </ion-thumbnail>
+        </ion-col>
+        <ion-col col-6>
+              <h6 item-left color="dark" style="width: 300px;font-weight: 600; white-space: nowrap; overflow: hidden !important;text-overflow: ellipsis;color: #a53c94;">{{company.name}}</h6>
+              <h6 item-left color="dark">{{company.workers}} {{'workers' | translate}}</h6>
+            </ion-col>
+        <ion-col col-2 style="max-height: 130px;padding-bottom: 0px;margin-top: 27px;">
+          <ion-buttons>
+            <button ion-button clear icon-only (click)="sendSMS(company.mobile)">
+              <ion-icon color="mov" ios="ios-text" md="md-text"></ion-icon>
+            </button>
+          </ion-buttons>
+
+          <!-- <ion-buttons>
+             <button ion-button clear icon-only>
+               <ion-icon color="mov" ios="ios-link" md="md-link"></ion-icon>
+             </button>
+           </ion-buttons>-->
+          <ion-buttons>
+            <button ion-button clear icon-only>
+              <a ion-text href="tel:{{company.mobile}}">
+                <ion-icon color="mov" ios="ios-call" md="ios-call"></ion-icon>
+              </a>
+            </button>
+          </ion-buttons>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-list>
+</div>
+
+  <ion-segment color="mov" [(ngModel)]="companySW" style="font-weight: bold;">
+    <ion-segment-button value="Workers">
+      <strong>{{'Workers'|translate}}</strong>
+    </ion-segment-button>
+    <ion-segment-button value="Intro">
+      <strong>{{'About Company'|translate}}</strong>
+    </ion-segment-button>
+    <ion-segment-button value="Location">
+      <strong>{{'Location'|translate}}</strong>
+    </ion-segment-button>
+  </ion-segment>
+
+  <div [ngSwitch]="companySW">
+
+    <div value="Intro" *ngSwitchCase="'Intro'"> <!--TODO intro page goes here-->
+
+      <ion-slides dir="ltr" #mySlider [autoplay]="2000" [loop]="true" class="myslider">
+        <!--*ngFor="let serv of worker"-->
+        <ion-slide class="slideImg" [ngStyle]="{
+    '-webkit-background-size': '100% 100%', '-moz-background-size': '100% 100%'
+               ,'-o-background-size': '100% 100%', 'background-size': '100% 100%'
+               ,'backgroundRepeat': 'no-repeat', 'backgroundPosition': 'center'}">
+          <img   src="{{company.picpath}}">
+        </ion-slide>
+        <ion-slide class="slideImg"
+                   [ngStyle]="{
+                 '-webkit-background-size': '100% 100%', '-moz-background-size': '100% 100%'
+               ,'-o-background-size': '100% 100%', 'background-size': '100% 100%'
+               ,'backgroundRepeat': 'no-repeat', 'backgroundPosition': 'center'}">
+          <img  src="{{company.image2}}">
+        </ion-slide>
+        <ion-slide class="slideImg"
+                   [ngStyle]="{
+                 '-webkit-background-size': '100% 100%', '-moz-background-size': '100% 100%'
+               ,'-o-background-size': '100% 100%', 'background-size': '100% 100%'
+               ,'backgroundRepeat': 'no-repeat', 'backgroundPosition': 'center'}">
+          <img src="{{company.image3}}">
+        </ion-slide>
+      </ion-slides>
+      <br>
+      <br>
+      <ion-list>
+        <div class="details">
+          <p class="compdetails"> {{company.details}}</p>
+        </div>
+      </ion-list>
+    </div>
+
+
+    <div value="Workers" *ngSwitchCase="'Workers'"> <!--TODO Workers page goes here-->
+        <ion-card  *ngFor="let worker of compworker"style="border: 1px solid #9d3a8d;border-radius: 8px;width: 97%;margin-right: auto;margin-left: auto;">
+          <ion-card-content style="padding: 0px;max-height: 130px">
+            <ion-grid style="padding:0px; margin-bottom: 5px">
+              <ion-row>
+                <ion-col col-4 style="height: 122px;padding-left: 10px;padding-top: 10px;" padding>
+                  <ion-thumbnail (click)="gotoDetails(worker.workerid)" item-left style="height: 100% ; border:1px solid gray">
+                    <img src="{{worker.picpath}}" height="100%"/>
+                  </ion-thumbnail>
+                </ion-col>
+                <ion-col col-6 style="padding-bottom: 0px;max-height: 122px;">
+                  <h6 ion-text color="dark" style="width: 300px; font-weight: 600 ;white-space: nowrap; overflow: hidden !important;text-overflow: ellipsis;color: #a53c94;">{{worker.name}}</h6>
+                  <h6 ion-text color="dark">{{worker.religion}}</h6>
+                  <h6 ion-text color="dark" style="width:300px;">{{worker.nationality}}</h6>
+                  <h6 ion-text color="dark" style="width:300px;">{{worker.occupation}}</h6>
+                  <h6 ion-text color="dark">{{worker.salary}} &ensp;{{worker.currency}}</h6>
+                  <button style="height: 24px;width: 60px;margin-top: 2px; text-transform: none;" ion-button color="mov" (click)="gotoDetails(worker.workerid)">{{'more' | translate}}</button>
+                </ion-col>
+                <ion-col col-2 style="max-height: 130px;padding-bottom: 0px;margin-top: -9px;">
+                  <button ion-button clear icon-only (click)="addToCart(worker.workerid)">
+                    <ion-icon color="mov" ios="ios-star" md="md-star"></ion-icon>
+                  </button>
+                  <button ion-button clear icon-only (click)="sendSMS(worker.companymobile)">
+                    <ion-icon color="mov" ios="ios-text" md="md-text" style="padding-top: 5px"></ion-icon>
+                  </button>
+                  <button ion-button clear icon-only>
+                    <a ion-text href="tel:{{worker.companymobile}}">
+                      <ion-icon color="mov" ios="ios-call" md="ios-call" style="padding-top: 9px"></ion-icon>
+                    </a>
+                  </button>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card-content>
+        </ion-card>
+    </div>
+
+
+    <div dir="ltr" value="Location" *ngSwitchCase="'Location'"> <!--TODO Location page goes here-->
+      <plain-map [lat]="lat" [lng]="lng"></plain-map>
+    </div>
+
+
+  </div>
+
+</ion-content>

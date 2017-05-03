@@ -1,0 +1,145 @@
+<ion-menu [content]="content" side='right' *ngIf="!isLeft">
+  <ion-header class="head">
+   <!-- <div class="f-img">
+    <img src="{{flagepicpath}}">
+      <h5 color="light" class="p-countryname">{{flage.countryname}}</h5>
+    </div>-->
+    <img src="assets/imgs/user.png" *ngIf="!globalService.loggedIn" class="p-img">
+    <img [src]="globalService.user.picpath" *ngIf="globalService.loggedIn" class="p-img">
+    <img src="assets/imgs/logomenu.png" class="p-icon">
+    <h5 class="p-username" *ngIf="globalService.loggedIn">{{this.globalService.user.name}}</h5>
+    <h5 class="p-username" *ngIf="!globalService.loggedIn"></h5>
+  </ion-header>
+
+  <ion-content class="menuContent">
+    <ion-list class="list" *ngIf="!globalService.loggedIn" no-lines style="background-color: #737989">
+
+      <button large ion-item (click)="toggleGroup(i)" [ngClass]="{active: isGroupShown(i)}" style="border-bottom: 1px solid black">
+        <ion-icon color="light" item-left [name]="isGroupShown(i) ? 'arrow-dropup' : 'arrow-dropdown'"
+                  class="m-icon"></ion-icon>&ensp; &ensp;
+        {{'Company Types' | translate}}
+      </button>
+
+      <button menuClose style="margin-right: 25px;border-bottom: 1px solid black" *ngIf="isGroupShown(i)" ion-item (click)="pushCompanies('1')">
+        {{'Manpower Companies'|translate}}
+      </button>
+      <button menuClose style="margin-right: 25px;border-bottom: 1px solid black" *ngIf="isGroupShown(i)" ion-item (click)="pushCompanies('2')">
+        {{'Cleaning & Hospitality Co.'|translate}}
+      </button>
+      <button menuClose style="margin-right: 25px;border-bottom: 1px solid black" *ngIf="isGroupShown(i)" ion-item (click)="pushCompanies('3')">
+        {{'Anti-Bugs Co.'|translate}}
+      </button>
+      <button menuClose style="margin-right: 25px;border-bottom: 1px solid black" *ngIf="isGroupShown(i)" ion-item (click)="pushCompanies('4')">
+        {{'Manpower Agencies Co.'|translate}}
+      </button>
+      <button class="menuar" large menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+        <ion-icon color="light" name="{{p.icon}}" class="m-icon"></ion-icon>
+        &ensp;{{p.title | translate}}
+      </button>
+    </ion-list>
+
+    <ion-list class="list" *ngIf="globalService.loggedIn" style="background-color: #737989">
+
+      <button class="companytype" ion-item (click)="toggleGroup(i)" [ngClass]="{active: isGroupShown(i)}">
+        <ion-icon color="light" [name]="isGroupShown(i) ? 'arrow-dropup' : 'arrow-dropdown'"
+                  class="m-icon"></ion-icon>&ensp; &ensp;
+        &ensp;{{'Company Types' | translate}}
+      </button>
+
+      <button menuClose  *ngIf="isGroupShown(i)" ion-item (click)="pushCompanies('1')">
+        {{'Manpower Companies'|translate}}
+      </button>
+      <button menuClose  *ngIf="isGroupShown(i)" ion-item (click)="pushCompanies('2')">
+        {{'Cleaning & Hospitality Co.'|translate}}
+      </button>
+      <button menuClose  *ngIf="isGroupShown(i)" ion-item (click)="pushCompanies('3')">
+        {{'Anti-Bugs Co.'|translate}}
+      </button>
+      <button menuClose  *ngIf="isGroupShown(i)" ion-item (click)="pushCompanies('4')">
+        {{'Manpower Agencies Co.'|translate}}
+      </button>
+
+
+      <button class="ptitle" large menuClose ion-item *ngFor="let p of pagesLogged" (click)="openPage(p)">
+        <ion-icon color="light" name="{{p.icon}}" class="m-icon"></ion-icon>
+        &ensp;{{p.title | translate}}
+      </button>
+
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<ion-menu [content]="content" side='left' *ngIf="isLeft">
+  <ion-header class="head">
+    <!--  <ion-avatar class="flag">
+        <img src="{{flagepicpath}}">
+      </ion-avatar>
+      <h6 color="light" class="countryname">{{countryname}}</h6>-->
+
+    <img src="assets/imgs/user.png" *ngIf="!globalService.loggedIn" class="p-img">
+    <img [src]="globalService.user.picpath" *ngIf="globalService.loggedIn" class="p-img">
+    <img src="assets/imgs/logomenu.png" class="p-icon">
+
+    <h5 class="p-username" *ngIf="globalService.loggedIn">{{this.globalService.user.name}}</h5>
+    <h5 class="p-username" *ngIf="!globalService.loggedIn"></h5>
+  </ion-header>
+
+  <ion-content class="menuContent">
+    <ion-list class="p-list" *ngIf="!globalService.loggedIn" style="background-color: #a368a8">
+
+      <button class="companytype" large ion-item (click)="toggleGroup(i)" [ngClass]="{active: isGroupShown(i)}">
+        <ion-icon color="light" item-left [name]="isGroupShown(i) ? 'arrow-dropup' : 'arrow-dropdown'"
+                  class="m-icon"></ion-icon>&ensp; &ensp;
+        &ensp;{{'Company Types' | translate}}
+      </button>
+
+      <button menuClose  *ngIf="isGroupShown(i)" ion-item (click)="pushCompanies('1')">
+        {{'Manpower Companies'|translate}}
+      </button>
+      <button menuClose  *ngIf="isGroupShown(i)" ion-item (click)="pushCompanies('2')">
+        {{'Cleaning & Hospitality Co.'|translate}}
+      </button>
+      <button menuClose  *ngIf="isGroupShown(i)" ion-item (click)="pushCompanies('3')">
+        {{'Anti-Bugs Co.'|translate}}
+      </button>
+      <button menuClose  *ngIf="isGroupShown(i)" ion-item (click)="pushCompanies('4')">
+        {{'Manpower Agencies Co.'|translate}}
+      </button>
+      <button large menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+        <ion-icon color="light" name="{{p.icon}}" class="m-icon"></ion-icon>
+        &ensp;{{p.title | translate}}
+      </button>
+
+    </ion-list>
+    <ion-list class="list" *ngIf="globalService.loggedIn" style="background-color: #a368a8">
+
+      <button class="companytype" large ion-item (click)="toggleGroup(i)" [ngClass]="{active: isGroupShown(i)}">
+        <ion-icon color="light" item-left [name]="isGroupShown(i) ? 'arrow-dropup' : 'arrow-dropdown'"
+                  class="m-icon"></ion-icon>&ensp; &ensp;
+        &ensp;{{'Company Types' | translate}}
+      </button>
+
+      <button menuClose  *ngIf="isGroupShown(i)" ion-item (click)="pushCompanies('1')">
+        {{'Manpower Companies'|translate}}
+      </button>
+      <button menuClose  *ngIf="isGroupShown(i)" ion-item (click)="pushCompanies('2')">
+        {{'Cleaning & Hospitality Co.'|translate}}
+      </button>
+      <button menuClose  *ngIf="isGroupShown(i)" ion-item (click)="pushCompanies('3')">
+        {{'Anti-Bugs Co.'|translate}}
+      </button>
+      <button menuClose  *ngIf="isGroupShown(i)" ion-item (click)="pushCompanies('4')">
+        {{'Manpower Agencies Co.'|translate}}
+      </button>
+      <button large menuClose ion-item *ngFor="let p of pagesLogged" (click)="openPage(p)">
+        <ion-icon color="light" name="{{p.icon}}" class="m-icon"></ion-icon>
+        &ensp; &ensp;{{p.title | translate}}
+      </button>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

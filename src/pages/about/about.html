@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar color="mov">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{'About Us'|translate}}</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="gotoSearch()">
+        <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content style="background-color: #eae3ea">
+  <ion-card>
+    <ion-card-content>
+      <div class="logo" style="text-align: center;width: 184px;margin:0 auto"><img src="assets/imgs/logo.jpg"></div>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-content>
+      <iframe width="100%" height="" src="https://www.youtube.com/embed/XDMExdiZnr4" frameborder="0" allowfullscreen></iframe>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <strong>{{title}}</strong>
+    </ion-card-header>
+    <ion-card-content>
+      <p class="textp"> {{text}}</p>
+      <!--<p class="version">Version 1.0.0</p>-->
+      <p class="copy">Copy Rights Alkhadam&copy; 2017</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

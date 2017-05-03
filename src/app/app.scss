@@ -1,0 +1,268 @@
+// http://ionicframework.com/docs/v2/theming/
+@import url('https://fonts.googleapis.com/css?family=Hammersmith+One');
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+@font-face {
+  font-family: 'JFFLAT-Regular';
+  src: url('../assets/fonts/JF Flat regular.ttf')  format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+body,html,div,i,span,label,p,b,u,a,h1,h2,h3,h4,h5,h6{
+  font-family: 'JFFLAT-Regular';
+}
+.input-wrapper {
+  font-size: larger;
+  color: #7e2770;
+}
+ion-label.label.label-md {
+  color: white;
+}
+.alert-head {
+  background-color: #9d3a8d;
+
+  color: white;
+  padding: 24px 24px 24px 24px;
+  text-align: center !important;
+  border-radius: 5px;
+}
+.alert-md .alert-title {
+  font-size: 22px;
+  text-align: center;
+  color:white;
+  font-family: 'ae_Ostorah';
+  text-transform: none;
+}
+.alert-radio-label {
+  font-weight: 800;
+  font-family: 'ae_Ostorah';
+  text-transform: none;
+
+}
+.alert-button-group {
+  /*background-color: #328cc1;*/
+  font-family: '';
+  text-transform: none;
+}
+.alert-wrapper {
+  text-transform: none;
+  border-bottom-left-radius: 20px !important;
+  border-bottom-right-radius: 20px !important;
+}
+ion-label.label.label-md {
+  color: black;
+  /*
+  font-weight: bolder;
+  */
+}
+.alert-md .alert-button {
+  position: relative;
+  overflow: hidden;
+  margin:auto;
+  padding: 10px 30px;
+  border-radius: 20px;
+  font-weight: bolder;
+  text-align: right;
+  text-transform: uppercase;
+  color: white;
+  background-color:  #9d3a8d;
+  text-transform: none;
+}
+ion-avatar.avatar {
+  overflow: hidden;
+  margin-top: -5%;
+  border: 1px solid white;
+  width: 19%;
+  height: 40%;
+  border-radius: 51%;
+  margin-left: 4px;
+}
+ion-avatar.logoKhadam {
+  width: 103px;
+  margin-left: 113px;
+  margin-top: -32px;
+  margin-right: auto;
+}
+img.profileImg {
+  height: 86px;
+}
+ion-header.head.header.header-md {
+  height: 150px;
+  background-color: #7e2770;
+}
+ion-header.head.header.header-ios {
+  height: 150px;
+  background-color: #7e2770;
+}
+ion-label.label.label-md {
+  color: #ffffff;
+  /*
+  font-weight: bolder;
+  */
+}
+ion-label.label.label-ios {
+  color: #ffffff;
+}
+button.item.item-block.item-md {
+  background-color: #737989;
+}
+
+  button.item.item-block.item-ios {
+    background-color: #737989;
+  }
+button.menuar.item.item-block.item-ios{
+  border-bottom: 1px solid white;
+}
+button.menuar.item.item-block.item-md {
+  border-bottom: 1px solid black;
+}
+
+.icon-md-light {
+  color: #f4f4f4;
+  font-size: 1.2em;
+}
+.list-md .item-block .item-inner {
+  border-bottom: 1px solid #333738;
+  /*
+  font-family: 'Droid Arabic kufi';
+  */
+}
+ion-content.menuContent.content.content-md {
+  color: #000;
+  background-color: #737989;
+}
+ion-content.menuContent.content.content-ios {
+  color: #000;
+  background-color: #737989;
+}
+
+ion-avatar.flag {
+  width: 12%;
+  margin-left: 2%;
+}
+h6.countryname.text.text-md.text-md-light {
+  margin-top: -3%;
+  margin-left: 8px;
+}
+h5.username {
+  color: white;
+  margin-top: -11%;
+  font-size: initial;
+  margin-left: 84px;
+}
+h6.countryname.text.text-ios.text-ios-light {
+  margin-top: -3%;
+  margin-left: 6%;
+}
+ion-icon.icon.icon-md.ion-md-arrow-dropright.item-icon {
+  float: right;
+}
+.item-md ion-icon[item-left] + .item-inner, .item-md ion-icon[item-left] + .item-input {
+  margin-left: -30px;
+}
+ion-slides.myslider.slides.slides-md.slides-0 {
+  border: 1px solid black;
+//  margin-top: -18%;
+}
+.swiper-slide img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  margin-top: 0;
+  max-height: 100%;
+}
+.alert-md .alert-radio-icon {
+  position: relative;
+  top: 0;
+  left: 13px;
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 50%;
+  border-color: #787878;
+  margin-right: 15%;
+}
+.f-img {
+  position: absolute;
+  top: 10px;
+  right:24px;
+  width: auto;
+  img{
+    height:40px;
+  }
+}
+.p-countryname{
+  margin-top: -9px;
+  margin-right: 4px;
+}
+.p-img{
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  height: 64px;
+  width: 64px;
+  border-radius:50%;
+  background-color: #fff;
+  border:2px solid #e7e7e7e;
+  left: 7px;
+}
+h5.p-username {
+  margin-right: 76px;
+  color: white;
+  font-size: initial;
+  margin-left: 76px;
+  width: inherit;
+  margin-top: -10px;
+}
+img.p-icon {
+  width: 38%;
+  height: 60%;
+  margin-right: 94px;
+  margin-top: 1px;
+  margin-left: 95px;
+  margin-bottom: 19px;
+}
+  button.item.item-block.item-md {
+    margin-right: 0px !important;
+    /*
+    border-bottom: 1px solid white;
+    */
+  }
+
+@media screen and (min-width: 600px) {
+  img.profileImg {
+    height: 145px;
+  }
+  ion-avatar.flag {
+    width: 12%;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  h5.username {
+    color: white;
+    margin-top: -11%;
+    font-size: x-large;
+    margin-left: 98px;
+  }
+  ion-avatar.avatar {
+    overflow: hidden;
+    margin-top: 9%;
+    border: 1px solid white;
+    width: 26%;
+    height: 41%;
+    border-radius: 51%;
+  }
+}

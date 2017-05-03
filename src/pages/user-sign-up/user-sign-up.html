@@ -1,0 +1,37 @@
+
+<ion-header >
+
+  <ion-navbar color="mov">
+    <ion-title>{{'Sign-Up'| translate }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <form (ngSubmit)="signup()" #registerForm="ngForm">
+    <ion-list inset>
+      <ion-item>
+        <ion-input type="text" placeholder="{{'Username'| translate }}" name="username" [(ngModel)]="username" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="email" placeholder="{{'Email'| translate }}" name="email" [(ngModel)]="email" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="number" placeholder="{{'Mobile'| translate }}" name="mobile" [(ngModel)]="mobile" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="password" placeholder="{{'Password'| translate }}" name="password" [(ngModel)]="password" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label id="lbl-28" color="graay" class="cawntry">{{'Country' | translate}}</ion-label>
+        <ion-select name="cawntry" [(ngModel)]="countryid">
+          <ion-option *ngFor="let country of countries" value="{{country.countryid}}">{{country.countryname | translate}}
+          </ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+    <button ion-button class="submit-btn" full color="mov" type="submit" [disabled]="!registerForm.form.valid">{{'Sign-Up' | translate}}
+    </button>
+  </form>
+</ion-content>

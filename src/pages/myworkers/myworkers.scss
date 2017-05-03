@@ -1,0 +1,22 @@
+page-myworkers {
+  .worker-img{
+    width:128px;
+    height:128px;
+    border-radius: 50%;
+    margin: 0 auto;
+    border: 1px #e7e7e7 solid;
+    background-color: #eee;
+  }
+  .worker-details{
+  	td{
+  		width:50%;
+  	  }
+  }
+  span.number.text.text-md.text-md-red {
+    margin-top: -19px;
+    font-weight: bolder;
+  }
+  ion-buttons.bar-buttons.bar-buttons-md {
+    margin-top: 4px;
+  }
+}

@@ -1,0 +1,80 @@
+<ion-header>
+  <ion-navbar color="mov">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{'Contact Us'|translate}}</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="gotoSearch()">
+        <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content style="background-color: #eae3ea">
+   <ion-card>
+     <ion-card-header style="text-align: center;">
+       {{'Location'|translate}}
+     </ion-card-header>
+     <ion-card-content>
+       <div dir="ltr" *ngFor="let co of cont"> <!--TODO Location page goes here-->
+         <plain-map [lat]="this.lat" [lng]="this.lng"></plain-map>
+       </div>
+     </ion-card-content>
+   <ion-card>
+    <ion-card-header style="text-align: center;">
+      {{'Send a message'| translate}}
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item class="forma"  dir="ltr">
+          <ion-input  name="name" [(ngModel)] = "name" type="text" placeholder="Username"></ion-input>
+        </ion-item>
+
+        <ion-item class="forma" dir="ltr">
+          <ion-input  name="email" [(ngModel)] = "email" type="email" placeholder="email"></ion-input>
+        </ion-item>
+
+        <ion-item class="forma" dir="ltr">
+          <ion-input  name="mobile" [(ngModel)] = "mobile" type="tel" placeholder="mobile"></ion-input>
+        </ion-item>
+
+        <ion-item class="forma" dir="ltr">
+          <ion-textarea rows="4" [(ngModel)] = "message"  placeholder="Write your message"></ion-textarea>
+        </ion-item>
+
+
+        <ion-item style="text-align: center;">
+          <button ion-button block default color="mov" (click)="sendMessage()">{{'Send' | translate}}</button>
+        </ion-item>
+      </ion-list>
+
+    </ion-card-content>
+   </ion-card>
+   <ion-card>
+    <ion-card-header style="text-align: center;">
+      {{'Call us'|translate}}
+    </ion-card-header>
+    <ion-card-content>
+      <div *ngFor="let co of cont">
+       <p class="cont">
+         {{co.content}}
+       </p>
+        <br>
+        {{'Telephone'|translate}}: {{co.mobile}}
+        <br>
+        {{co.facebook}}
+        <br>
+        {{co.twitter}}
+      </div>
+
+    </ion-card-content>
+   </ion-card>
+
+
+
+
+
+   </ion-card>
+
+</ion-content>
